@@ -74,6 +74,8 @@ function bns_body_classes( $classes ) {
 
         /** Add theme-<Name> to default body classes */
         $classes[] = 'theme-' . sanitize_html_class( get_option( 'template' ) );
+
+        $classes = apply_filters( 'bns_body_classes', $classes );
         return $classes;
 }
 ?>
