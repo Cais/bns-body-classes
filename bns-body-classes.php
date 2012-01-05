@@ -48,6 +48,10 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * Last revised January 5, 2012
+ * @internal    Project To-Do List
+ * @todo add options page to include custom classes
+ * @todo add options to specify when custom class is applied (i.e.: which template types it applies to)
+ * @todo Justify this is not just another Mallory-Everest Plugin!
  */
 
 /**

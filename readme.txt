@@ -2,7 +2,7 @@
 Contributors: cais
 Donate Link: http://buynowshop.com/
 Tags: CSS, body
-Requires: tba
+Requires at least: 3.0
 Tested Up To: 3.3.1
 Stable Tag: 0.1
 
@@ -30,7 +30,7 @@ This section describes how to install the plugin and get it working.
 
 Please read this article for further assistance: http://wpfirstaid.com/2009/12/plugin-installation/
 
-== Frequently Asked Question ==
+== Frequently Asked Questions ==
 No questions have been asked.
 
 == Screenshots ==
