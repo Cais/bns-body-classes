@@ -62,5 +62,8 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.2 =
+* Add options page to include custom classes
+
 = 0.1 =
 * Initial Release - January 2012
