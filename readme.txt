@@ -4,7 +4,7 @@ Donate Link: http://buynowshop.com/
 Tags: CSS, body
 Requires at least: 3.0
 Tested Up To: 3.3.1
-Stable Tag: 0.1
+Stable Tag: 0.2
 
 Simple plugin that adds classes to the `body_class` output upon activation.
 

@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation.
-Version: 0.2-alpha
+Version: 0.2
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -47,7 +47,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Last revised January 12, 2012
+ * Last revised January 29, 2012
  * @internal    Project To-Do List
  * @todo add options to specify when custom class is applied (i.e.: which template types it applies to)
  * @todo Justify this is not just another Mallory-Everest Plugin!
@@ -82,8 +82,6 @@ function bns_body_classes( $classes ) {
         return $classes;
 }
 
-/**
- * Add settings page
- */
-include 'bnsbc-settings.php';
+/** Add BNSBC Options */
+include 'bnsbc-options.php';
 ?>
