@@ -18,6 +18,10 @@
  *
  * Thanks to Samuel Wood aka Otto42 and his post at http://ottopress.com/2009/wordpress-settings-api-tutorial
  *
+ * Last revised February 6, 2012
+ * @version     0.2.1
+ * Corrected issue with initial empty array being fed to the `implode` function
+ *
  * @todo Fix the copy-pasta look of this file
  * @todo Complete the documentation for each function
  * @todo Add more options
@@ -77,9 +81,15 @@ function plugin_options_validate( $input ) {
  * @since   0.2
  * @param   $classes
  * @return  array
+ *
+ * @version 0.2.1
+ * Corrected issue with initial empty array being fed to the `implode` function
  */
 function bnsbc_option_classes( $classes ) {
     $option_classes = get_option( 'plugin_options' );
+    // Add something to the array so implode does not implode if the array is empty
+    // @todo Write a better fix
+    $option_classes[] = ' ';
     // Convert array to string
     $added_classes = strtolower( implode( ' ', $option_classes ) );
     // Replace commas with spaces
