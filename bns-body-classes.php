@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation.
-Version: 0.2.1
+Version: 0.2.2
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -22,7 +22,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @link        https://github.com/Cais/bns-body-classes/
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
- * @version     0.2.1
+ * @version     0.2.2
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2012, Edward Caissie
