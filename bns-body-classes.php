@@ -84,4 +84,3 @@ function bns_body_classes( $classes ) {
 
 /** Add BNSBC Options */
 include 'bnsbc-options.php';
-?>
