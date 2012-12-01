@@ -3,13 +3,13 @@ Contributors: cais
 Donate Link: http://buynowshop.com/
 Tags: CSS, body, plugin-only
 Requires at least: 3.0
-Tested Up To: 3.4.2
-Stable Tag: 0.2.2
+Tested Up To: 3.5
+Stable Tag: 0.3
 
-Simple plugin that adds classes to the `body_class` output upon activation.
+Simple plugin that adds classes to the `body_class` output upon activation, including a range of date related classes.
 
 == Description ==
-Simple plugin that adds classes to the `body_class` output upon activation.
+Simple plugin that adds classes to the `body_class` output upon activation, including: a full list of date classes; holiday classes ... and more to follow.
 
 == Installation ==
 This section describes how to install the plugin and get it working.
@@ -31,7 +31,20 @@ This section describes how to install the plugin and get it working.
 Please read this article for further assistance: http://wpfirstaid.com/2009/12/plugin-installation/
 
 == Frequently Asked Questions ==
-No questions have been asked.
+= What are the "Current Date" classes?
+The "Current Date" classes are a collection of classes dynamically created classes relevant to the date the reader lands
+on the site. These classes would include on December 1, 2012 at 5:00pm (GMT-5) the following:
+
+* year-2012
+* leap-year
+* month-12
+* month-dec
+* month-december
+* day-01
+* day-sat
+* day-saturday
+* hour-22
+* hour-10pm
 
 == Screenshots ==
 No screenshots are available.
@@ -62,6 +75,12 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.3 =
+* Released December 1, 2012
+* Add "Current Date" classes
+* Add "Holidays" classes (Christmas and New Years)
+* Refactored main plugin file to OOP code format
+
 = 0.2.2 =
 * Tested compatible with WordPress 3.4
 
