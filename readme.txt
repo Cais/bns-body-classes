@@ -5,6 +5,8 @@ Tags: CSS, body, plugin-only
 Requires at least: 3.0
 Tested Up To: 3.5
 Stable Tag: 0.3
+License: GNU General Public License v2
+License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Simple plugin that adds classes to the `body_class` output upon activation, including a range of date related classes.
 
@@ -76,7 +78,7 @@ Please stay current with your WordPress installation, your active theme, and you
 
 == Changelog ==
 = 0.3 =
-* Released December 1, 2012
+* Released December 2012
 * Add "Current Date" classes
 * Add "Holidays" classes (Christmas and New Years)
 * Refactored main plugin file to OOP code format
