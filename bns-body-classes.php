@@ -48,6 +48,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
+ * Last revised January 29, 2012
  * @internal    Project To-Do List
  * @todo add options to specify when custom class is applied (i.e.: which template types it applies to)
  *
@@ -56,6 +57,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  *
  * @version 0.4
  * @date    December 11, 2012
+ * Add 2013 date related classes
  */
 
 class BNS_Body_Classes {
@@ -99,10 +101,9 @@ class BNS_Body_Classes {
         /** Add Holiday Classes */
         $classes[] = $this->holidays();
 
-        /** Add 2013 Classes */
-        if ( 2013 == date( 'Y' ) ) {
-            // require_once( plugin_dir_url( __FILE__ ) . 'bnsbc-2013.php' );
-        }
+        /** @var $more_classes - for additional classes from extensions */
+        $more_classes = apply_filters( 'bnsbc_more_classes', '' );
+        $classes[] .= $more_classes;
 
         /** @var $classes - overwrite the body classes at the last minute class additions? */
         $classes = apply_filters( 'bns_body_classes', $classes );
@@ -167,7 +168,7 @@ class BNS_Body_Classes {
         $holidays = '';
 
         /** New Year's Day */
-        if ( ( '12' == date( 'm' ) ) && ( '31' == date( 'd' ) ) && ( 18 < date( 'H' ) ) ) {
+        if ( ( '01' == date( 'm' ) ) && ( '01' == date( 'd' ) ) && ( 18 < date( 'H' ) ) ) {
             $holidays .= ' new-years-eve';
         }
         if ( ( '01' == date( 'm' ) ) && ( '01' == date( 'd' ) ) ) {
@@ -185,9 +186,12 @@ class BNS_Body_Classes {
         return $holidays;
 
     }
-
 }
 $bns_body_classes = new BNS_Body_Classes();
 
 /** Add BNSBC Options */
 include 'bnsbc-options.php';
+
+/** Add 2013 date related classes */
+/** @todo change to 2013 before releasing (testing with date set to 2012) */
+if ( '2012' == date( 'Y' ) ) { include( 'bnsbc-2013.php' ); }

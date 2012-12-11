@@ -40,16 +40,15 @@ class BNSBC_2013 {
      * Constructor
      */
     function __construct() {
-        /** Add Body Classes */
-        add_filter( 'body_class', array( $this, 'bnsbc_2013_classes' ) );
+        add_filter( 'bnsbc_more_classes', array( $this, 'bnsbc_2013_classes' ) );
     }
 
     /**
      * BNS Body Classes 2013
      *
      */
-    function bnsbc_2013_classes( $classes ) {
-        $classes[] = $this->Canadian_holidays();
+    function bnsbc_2013_classes() {
+        $classes = $this->Canadian_holidays();
 
         return $classes;
     }
