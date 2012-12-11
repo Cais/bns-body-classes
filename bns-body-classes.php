@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation, including a full list of date classes.
-Version: 0.3
+Version: 0.4
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -23,7 +23,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @link        https://github.com/Cais/bns-body-classes/
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
- * @version     0.3
+ * @version     0.4
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2012, Edward Caissie
@@ -48,12 +48,14 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Last revised January 29, 2012
  * @internal    Project To-Do List
  * @todo add options to specify when custom class is applied (i.e.: which template types it applies to)
  *
  * @version 0.3
  * @date    December 1, 2012
+ *
+ * @version 0.4
+ * @date    December 11, 2012
  */
 
 class BNS_Body_Classes {
@@ -96,6 +98,11 @@ class BNS_Body_Classes {
 
         /** Add Holiday Classes */
         $classes[] = $this->holidays();
+
+        /** Add 2013 Classes */
+        if ( 2013 == date( 'Y' ) ) {
+            // require_once( plugin_dir_url( __FILE__ ) . 'bnsbc-2013.php' );
+        }
 
         /** @var $classes - overwrite the body classes at the last minute class additions? */
         $classes = apply_filters( 'bns_body_classes', $classes );
@@ -160,7 +167,7 @@ class BNS_Body_Classes {
         $holidays = '';
 
         /** New Year's Day */
-        if ( ( '01' == date( 'm' ) ) && ( '01' == date( 'd' ) ) && ( 18 < date( 'H' ) ) ) {
+        if ( ( '12' == date( 'm' ) ) && ( '31' == date( 'd' ) ) && ( 18 < date( 'H' ) ) ) {
             $holidays .= ' new-years-eve';
         }
         if ( ( '01' == date( 'm' ) ) && ( '01' == date( 'd' ) ) ) {
@@ -178,6 +185,7 @@ class BNS_Body_Classes {
         return $holidays;
 
     }
+
 }
 $bns_body_classes = new BNS_Body_Classes();
 

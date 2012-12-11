@@ -18,60 +18,15 @@
  *
  * Thanks to Samuel Wood aka Otto42 and his post at http://ottopress.com/2009/wordpress-settings-api-tutorial
  *
- * Last revised February 6, 2012
  * @version     0.2.1
+ * @date        February 6, 2012
  * Corrected issue with initial empty array being fed to the `implode` function
  *
- * @todo Fix the copy-pasta look of this file
  * @todo Complete the documentation for each function
  * @todo Add more options
  * @todo Make i18n compatible
  * @todo Sort out validations required (CSS class cannot start with a number, etc.)
  */
-
-// add the admin options page
-add_action( 'admin_menu', 'plugin_admin_add_page' );
-function plugin_admin_add_page() {
-    add_options_page( 'BNS Body Classes Settings', 'BNS Body Classes Settings', 'manage_options', 'plugin', 'plugin_options_page' );
-}
-
-// display the admin options page
-function plugin_options_page() { ?>
-    <div>
-        <h2><?php _e ( 'BNS Body Classes Settings and Options', 'bns-bc' ); ?></h2>
-        <?php _e( 'Options relating to the BNS Body Classes Plugin.', 'bns-bc' ); ?>
-        <form action="options.php" method="post">
-            <?php settings_fields( 'plugin_options' ); ?>
-            <?php do_settings_sections( 'plugin' ); ?>
-            <input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
-        </form>
-    </div>
-<?php }
-
-// add the admin settings and such
-add_action( 'admin_init', 'plugin_admin_init' );
-function plugin_admin_init(){
-    register_setting( 'plugin_options', 'plugin_options', 'plugin_options_validate' );
-    add_settings_section( 'plugin_main', 'Main Settings', 'plugin_section_text', 'plugin' );
-    add_settings_field( 'plugin_text_string', 'Plugin Text Input', 'plugin_setting_string', 'plugin', 'plugin_main' );
-}
-
-function plugin_section_text() {
-    $text = 'Main description of this section here.';
-    printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
-}
-
-function plugin_setting_string() {
-    $options = get_option( 'plugin_options' );
-    echo "<input id='plugin_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
-}
-
-// validate our options
-function plugin_options_validate( $input ) {
-    $options = get_option( 'plugin_options' );
-    $options['text_string'] = trim( $input['text_string'] );
-    return $options;
-}
 
 /**
  * BNS Body Classes Option Classes
@@ -101,3 +56,122 @@ function bnsbc_option_classes( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'bnsbc_option_classes' );
+
+// add the admin options page
+/**
+ * Plugin Admin Add Page
+ *
+ * @package BNS_Body_Classes
+ * @since   0.2
+ *
+ * @uses    add_options_page
+ */
+function plugin_admin_add_page() {
+    add_options_page(
+        'BNS Body Classes',
+        'BNS Body Classes',
+        'manage_options',
+        'plugin',
+        'plugin_options_page'
+    );
+}
+add_action( 'admin_menu', 'plugin_admin_add_page' );
+
+// display the admin options page
+/**
+ * Plugin Options Page
+ *
+ * @package BNS_Body_Classes
+ * @since   0.2
+ *
+ * @uses    do_settings_sections
+ * @uses    settings_fields
+ */
+function plugin_options_page() { ?>
+    <div>
+        <h2><?php _e ( 'BNS Body Classes Settings and Options', 'bns-bc' ); ?></h2>
+        <?php _e( 'Options relating to the BNS Body Classes Plugin.', 'bns-bc' ); ?>
+        <form action="options.php" method="post">
+            <?php
+            settings_fields( 'plugin_options' );
+            do_settings_sections( 'plugin' ); ?>
+            <input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
+        </form>
+    </div>
+<?php }
+
+// add the admin settings and such
+/**
+ * Plugin Admin Init
+ *
+ * @package BNS_Body_Classes
+ * @since   0.2
+ *
+ * @uses    register_setting
+ * @uses    add_settings_section
+ * @uses    add_settings_field
+ */
+function plugin_admin_init() {
+    register_setting(
+        'plugin_options',
+        'plugin_options',
+        'plugin_options_validate'
+    );
+    add_settings_section(
+        'plugin_main',
+        'Main Settings',
+        'plugin_section_text',
+        'plugin'
+    );
+    add_settings_field(
+        'plugin_text_string',
+        'Plugin Text Input',
+        'plugin_setting_string',
+        'plugin',
+        'plugin_main'
+    );
+}
+add_action( 'admin_init', 'plugin_admin_init' );
+
+/**
+ * Plugin Section Text
+ *
+ * @package BNS_Body_Classes
+ * @since   0.2
+ */
+function plugin_section_text() {
+    $text = 'Main description of this section here.';
+    printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
+}
+
+/**
+ * Plugin Setting String
+ *
+ * @package BNS_Body_Classes
+ * @since   0.2
+ *
+ * @uses    get_option
+ */
+function plugin_setting_string() {
+    $options = get_option( 'plugin_options' );
+    echo "<input id='plugin_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
+}
+
+// validate our options
+/**
+ * Plugin Options Validate
+ *
+ * @package BNS_Body_Classes
+ * @since   0.2
+ *
+ * @param   $input
+ *
+ * @uses    get_option
+ *
+ * @return  mixed|void
+ */
+function plugin_options_validate( $input ) {
+    $options = get_option( 'plugin_options' );
+    $options['text_string'] = trim( $input['text_string'] );
+    return $options;
+}
