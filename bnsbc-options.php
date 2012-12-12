@@ -18,20 +18,30 @@
  *
  * Thanks to Samuel Wood aka Otto42 and his post at http://ottopress.com/2009/wordpress-settings-api-tutorial
  *
- * Last revised February 6, 2012
  * @version     0.2.1
+ * @date        February 6, 2012
  * Corrected issue with initial empty array being fed to the `implode` function
  *
- * @todo Fix the copy-pasta look of this file
+ * @version     0.4
+ * @date        December 12, 2012
+ * Refactored to more appropriate naming conventions
+ *
  * @todo Complete the documentation for each function
  * @todo Add more options
  * @todo Make i18n compatible
  * @todo Sort out validations required (CSS class cannot start with a number, etc.)
  */
 
-// add the admin options page
-add_action( 'admin_menu', 'plugin_admin_add_page' );
-function plugin_admin_add_page() {
+/**
+ * BNSBC Add Admin Page
+ * Add the admin options page
+ *
+ * @package     BNS_Body_Classes
+ * @subpackage  BNSBC_Options
+ *
+ * @uses        add_options_page
+ */
+function bnsbc_add_admin_page() {
     add_options_page(
         'BNS Body Classes',
         'BNS Body Classes',
@@ -40,6 +50,7 @@ function plugin_admin_add_page() {
         'plugin_options_page'
     );
 }
+add_action( 'admin_menu', 'bnsbc_add_admin_page' );
 
 // display the admin options page
 function plugin_options_page() { ?>
@@ -55,7 +66,17 @@ function plugin_options_page() { ?>
     </div>
 <?php }
 
-/** Add the admin settings and such */
+/**
+ * BNSBC Admin Init
+ * Add the admin settings and such
+ *
+ * @package     BNS_Body_Classes
+ * @subpackage  BNS_Options
+ *
+ * @uses        register_setting
+ * @uses        add_settings_section
+ * @uses        add_settings_field
+ */
 function bnsbc_admin_init(){
     register_setting(
         'plugin_options',
@@ -78,13 +99,19 @@ function bnsbc_admin_init(){
 }
 add_action( 'admin_init', 'bnsbc_admin_init' );
 
-/**  */
+/**
+ * Add Custom Classes Text
+ */
 function add_custom_classes_text() {
     $text = 'Enter your custom classes into the text field and click the "Save Changes" button.';
     printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
 }
 
-/**  */
+/**
+ * Custom Classes Input
+ *
+ * @uses    get_option
+ */
 function custom_classes_input() {
     $options = get_option( 'plugin_options' );
     echo "<input id='custom_classes_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
