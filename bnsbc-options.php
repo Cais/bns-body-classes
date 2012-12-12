@@ -32,7 +32,13 @@
 // add the admin options page
 add_action( 'admin_menu', 'plugin_admin_add_page' );
 function plugin_admin_add_page() {
-    add_options_page( 'BNS Body Classes Settings', 'BNS Body Classes Settings', 'manage_options', 'plugin', 'plugin_options_page' );
+    add_options_page(
+        'BNS Body Classes Settings',
+        'BNS Body Classes Settings',
+        'manage_options',
+        'plugin',
+        'plugin_options_page'
+    );
 }
 
 // display the admin options page
@@ -41,8 +47,9 @@ function plugin_options_page() { ?>
         <h2><?php _e ( 'BNS Body Classes Settings and Options', 'bns-bc' ); ?></h2>
         <?php _e( 'Options relating to the BNS Body Classes Plugin.', 'bns-bc' ); ?>
         <form action="options.php" method="post">
-            <?php settings_fields( 'plugin_options' ); ?>
-            <?php do_settings_sections( 'plugin' ); ?>
+            <?php
+            settings_fields( 'plugin_options' );
+            do_settings_sections( 'plugin' ); ?>
             <input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
         </form>
     </div>
@@ -51,9 +58,24 @@ function plugin_options_page() { ?>
 // add the admin settings and such
 add_action( 'admin_init', 'plugin_admin_init' );
 function plugin_admin_init(){
-    register_setting( 'plugin_options', 'plugin_options', 'plugin_options_validate' );
-    add_settings_section( 'plugin_main', 'Main Settings', 'plugin_section_text', 'plugin' );
-    add_settings_field( 'plugin_text_string', 'Plugin Text Input', 'plugin_setting_string', 'plugin', 'plugin_main' );
+    register_setting(
+        'plugin_options',
+        'plugin_options',
+        'plugin_options_validate'
+    );
+    add_settings_section(
+        'plugin_main',
+        'Main Settings',
+        'plugin_section_text',
+        'plugin'
+    );
+    add_settings_field(
+        'plugin_text_string',
+        'Plugin Text Input',
+        'plugin_setting_string',
+        'plugin',
+        'plugin_main'
+    );
 }
 
 function plugin_section_text() {
