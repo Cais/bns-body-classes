@@ -33,8 +33,8 @@
 add_action( 'admin_menu', 'plugin_admin_add_page' );
 function plugin_admin_add_page() {
     add_options_page(
-        'BNS Body Classes Settings',
-        'BNS Body Classes Settings',
+        'BNS Body Classes',
+        'BNS Body Classes',
         'manage_options',
         'plugin',
         'plugin_options_page'
@@ -44,8 +44,8 @@ function plugin_admin_add_page() {
 // display the admin options page
 function plugin_options_page() { ?>
     <div>
-        <h2><?php _e ( 'BNS Body Classes Settings and Options', 'bns-bc' ); ?></h2>
-        <?php _e( 'Options relating to the BNS Body Classes Plugin.', 'bns-bc' ); ?>
+        <h2><?php _e ( 'BNS Body Classes Options and Settings', 'bns-bc' ); ?></h2>
+        <?php _e( 'Options and settings related to the BNS Body Classes plugin.', 'bns-bc' ); ?>
         <form action="options.php" method="post">
             <?php
             settings_fields( 'plugin_options' );
@@ -55,40 +55,42 @@ function plugin_options_page() { ?>
     </div>
 <?php }
 
-// add the admin settings and such
-add_action( 'admin_init', 'plugin_admin_init' );
-function plugin_admin_init(){
+/** Add the admin settings and such */
+function bnsbc_admin_init(){
     register_setting(
         'plugin_options',
         'plugin_options',
         'plugin_options_validate'
     );
     add_settings_section(
-        'plugin_main',
-        'Main Settings',
-        'plugin_section_text',
+        'add_custom_classes',
+        'Add Custom Classes',
+        'add_custom_classes_text',
         'plugin'
     );
     add_settings_field(
-        'plugin_text_string',
-        'Plugin Text Input',
-        'plugin_setting_string',
+        'custom_classes_text_string',
+        'Custom Classes',
+        'custom_classes_input',
         'plugin',
-        'plugin_main'
+        'add_custom_classes'
     );
 }
+add_action( 'admin_init', 'bnsbc_admin_init' );
 
-function plugin_section_text() {
-    $text = 'Main description of this section here.';
+/**  */
+function add_custom_classes_text() {
+    $text = 'Enter your custom classes into the text field and click the "Save Changes" button.';
     printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
 }
 
-function plugin_setting_string() {
+/**  */
+function custom_classes_input() {
     $options = get_option( 'plugin_options' );
-    echo "<input id='plugin_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
+    echo "<input id='custom_classes_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
 }
 
-// validate our options
+/** Validate our options */
 function plugin_options_validate( $input ) {
     $options = get_option( 'plugin_options' );
     $options['text_string'] = trim( $input['text_string'] );
@@ -97,7 +99,6 @@ function plugin_options_validate( $input ) {
 
 /**
  * BNS Body Classes Option Classes
- *
  * Add classes set in the BNS Body Classes Options page
  *
  * @since   0.2
