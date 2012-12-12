@@ -191,7 +191,3 @@ $bns_body_classes = new BNS_Body_Classes();
 
 /** Add BNSBC Options */
 include 'bnsbc-options.php';
-
-/** Add 2013 date related classes */
-/** @todo change to 2013 before releasing (testing with date set to 2012) */
-if ( '2012' == date( 'Y' ) ) { include( 'bnsbc-2013.php' ); }

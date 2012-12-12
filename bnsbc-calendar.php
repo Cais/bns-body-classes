@@ -57,7 +57,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @internal    Use as a sample only, will not add any classes as is and will be
  * overwritten with each update to the parent plugin BNS Body Classes
  *
- * @return string - classes as defined by dates
+ * @return      string - classes as defined by dates
  */
 function bnsbc_calendar() {
     $dates = '';

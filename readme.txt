@@ -79,6 +79,7 @@ Please stay current with your WordPress installation, your active theme, and you
 == Changelog ==
 = 0.4 =
 * Released December 2012
+* Added generic calendar extension plugin
 * Prepared for extension plugins
 
 = 0.3 =
