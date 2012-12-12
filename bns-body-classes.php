@@ -156,7 +156,7 @@ class BNS_Body_Classes {
 
     /**
      * Holidays
-     * Holiday related classes
+     * Christmas and New Year Holiday related classes
      *
      * @package BNS_Body_Classes
      * @since   0.3

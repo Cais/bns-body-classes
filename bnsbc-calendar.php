@@ -51,7 +51,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 /**
  * BNSBC Calendar
  *
- * @subpackage  BNSBC_Calandar
+ * @subpackage  BNSBC_Calendar
  * @since       0.4
  *
  * @internal    Use as a sample only, will not add any classes as is and will be
@@ -479,5 +479,6 @@ function bnsbc_calendar() {
 
     return $dates;
 }
-/** Add to hook in  */
+
+/** Add to hook in parent plugin BNS Body Classes */
 add_filter( 'bnsbc_more_classes', 'bnsbc_calendar' );

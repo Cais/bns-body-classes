@@ -84,20 +84,24 @@ function plugin_options_validate( $input ) {
  *
  * @version 0.2.1
  * Corrected issue with initial empty array being fed to the `implode` function
+ *
+ * @version 0.4
+ * @date    December 12, 2012
+ * Added conditional check on `option_classes`
  */
 function bnsbc_option_classes( $classes ) {
     $option_classes = get_option( 'plugin_options' );
-    // Add something to the array so implode does not implode if the array is empty
-    // @todo Write a better fix
-    $option_classes[] = ' ';
-    // Convert array to string
-    $added_classes = strtolower( implode( ' ', $option_classes ) );
-    // Replace commas with spaces
-    $added_classes = preg_replace( '/[,]/', ' ', $added_classes );
-    // Replace multiple spaces with a single space
-    $added_classes = preg_replace('/  +/', ' ', $added_classes );
-    // Add to $classes and return
-    $classes[] = $added_classes;
+    if ( $option_classes ) {
+        /** Convert array to string */
+        $added_classes = strtolower( implode( ' ', $option_classes ) );
+        /** Replace commas with spaces */
+        $added_classes = preg_replace( '/[,]/', ' ', $added_classes );
+        /** Replace multiple spaces with a single space */
+        $added_classes = preg_replace('/  +/', ' ', $added_classes );
+        /** Add to $classes and return */
+        $classes[] = $added_classes;
+    }
+
     return $classes;
 }
 add_filter( 'body_class', 'bnsbc_option_classes' );
