@@ -96,8 +96,8 @@ function bnsbc_option_classes( $classes ) {
         $added_classes = strtolower( implode( ' ', $option_classes ) );
         /** Replace commas with spaces */
         $added_classes = preg_replace( '/[,]/', ' ', $added_classes );
-        /** Replace multiple spaces with a single space */
-        $added_classes = preg_replace('/  +/', ' ', $added_classes );
+        /** Replace whitespace with a single space */
+        $added_classes = preg_replace( '/\s\s+/', ' ', $added_classes );
         /** Add to $classes and return */
         $classes[] = $added_classes;
     }
