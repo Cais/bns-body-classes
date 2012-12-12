@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes Calendar Extension
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: A sample extension to the BNS Body Classes plugin adding calendar classes
-Version: 0.1
+Version: 0.4
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
