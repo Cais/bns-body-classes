@@ -26,7 +26,6 @@
  * @date        December 12, 2012
  * Refactored to more appropriate naming conventions
  *
- * @todo Complete the documentation for each function
  * @todo Add more options
  * @todo Sort out validations required (CSS class cannot start with a number, etc.)
  */
@@ -45,21 +44,21 @@ function bnsbc_add_admin_page() {
         'BNS Body Classes',
         'BNS Body Classes',
         'manage_options',
-        'plugin',
-        'plugin_options_page'
+        'bnsbc',
+        'bnsbc_options_page'
     );
 }
 add_action( 'admin_menu', 'bnsbc_add_admin_page' );
 
 // display the admin options page
-function plugin_options_page() { ?>
+function bnsbc_options_page() { ?>
     <div>
         <h2><?php _e ( 'BNS Body Classes Options and Settings', 'bns-bc' ); ?></h2>
         <?php _e( 'Options and settings related to the BNS Body Classes plugin.', 'bns-bc' ); ?>
         <form action="options.php" method="post">
             <?php
-            settings_fields( 'plugin_options' );
-            do_settings_sections( 'plugin' ); ?>
+            settings_fields( 'bnsbc_custom_classes' );
+            do_settings_sections( 'bnsbc' ); ?>
             <input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
         </form>
     </div>
@@ -67,7 +66,7 @@ function plugin_options_page() { ?>
 
 /**
  * BNSBC Admin Init
- * Add the admin settings and such
+ * Register option settings, sections, and inputs
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNS_Options
@@ -76,23 +75,24 @@ function plugin_options_page() { ?>
  * @uses        add_settings_section
  * @uses        add_settings_field
  */
-function bnsbc_admin_init(){
+function bnsbc_admin_init() {
+    /** Add Custom Classes Option */
     register_setting(
-        'plugin_options',
-        'plugin_options',
-        'plugin_options_validate'
+        'bnsbc_custom_classes',
+        'bnsbc_custom_classes_field',
+        'bnsbc_custom_classes_validator'
     );
     add_settings_section(
         'add_custom_classes',
         __( 'Add Custom Classes', 'bns-bc' ),
         'add_custom_classes_text',
-        'plugin'
+        'bnsbc'
     );
     add_settings_field(
         'custom_classes_text_string',
         __( 'Custom Classes', 'bns-bc' ),
         'custom_classes_input',
-        'plugin',
+        'bnsbc',
         'add_custom_classes'
     );
 }
@@ -100,6 +100,7 @@ add_action( 'admin_init', 'bnsbc_admin_init' );
 
 /**
  * Add Custom Classes Text
+ * Displays as a message for the input field
  */
 function add_custom_classes_text() {
     $text = 'Enter your custom classes into the text field and click the "Save Changes" button.';
@@ -108,17 +109,26 @@ function add_custom_classes_text() {
 
 /**
  * Custom Classes Input
+ * The input field for the custom classes
  *
  * @uses    get_option
  */
 function custom_classes_input() {
-    $options = get_option( 'plugin_options' );
-    echo "<input id='custom_classes_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
+    $options = get_option( 'bnsbc_custom_classes_field' );
+    echo "<input id='custom_classes_text_string' name='bnsbc_custom_classes_field[text_string]' size='40' type='text' value='{$options['text_string']}' />";
 }
 
-/** Validate our options */
-function plugin_options_validate( $input ) {
-    $options = get_option( 'plugin_options' );
+/**
+ * BNSBC Custom Classes Validator
+ * Validate the data entered for the option
+ *
+ * @package     BNS_Body_Classes
+ * @subpackage  BNSBC_Options
+ *
+ * @uses        get_option
+ */
+function bnsbc_custom_classes_validator( $input ) {
+    $options = get_option( 'bnsbc_custom_classes_field' );
     $options['text_string'] = trim( $input['text_string'] );
     return $options;
 }
@@ -139,7 +149,7 @@ function plugin_options_validate( $input ) {
  * Added conditional check on `option_classes`
  */
 function bnsbc_option_classes( $classes ) {
-    $option_classes = get_option( 'plugin_options' );
+    $option_classes = get_option( 'bnsbc_custom_classes_field' );
     if ( $option_classes ) {
         /** Convert array to string */
         $added_classes = strtolower( implode( ' ', $option_classes ) );
