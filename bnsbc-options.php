@@ -28,7 +28,6 @@
  *
  * @todo Complete the documentation for each function
  * @todo Add more options
- * @todo Make i18n compatible
  * @todo Sort out validations required (CSS class cannot start with a number, etc.)
  */
 
@@ -85,13 +84,13 @@ function bnsbc_admin_init(){
     );
     add_settings_section(
         'add_custom_classes',
-        'Add Custom Classes',
+        __( 'Add Custom Classes', 'bns-bc' ),
         'add_custom_classes_text',
         'plugin'
     );
     add_settings_field(
         'custom_classes_text_string',
-        'Custom Classes',
+        __( 'Custom Classes', 'bns-bc' ),
         'custom_classes_input',
         'plugin',
         'add_custom_classes'

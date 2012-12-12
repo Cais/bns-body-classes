@@ -81,6 +81,7 @@ Please stay current with your WordPress installation, your active theme, and you
 * Released December 2012
 * Added conditional check on `option_classes`
 * Added generic calendar extension plugin
+* i18n updates
 * Prepared for extension plugins
 * Refactored options to more appropriate naming conventions
 
