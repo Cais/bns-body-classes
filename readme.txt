@@ -4,7 +4,7 @@ Donate Link: http://buynowshop.com/
 Tags: CSS, body, plugin-only
 Requires at least: 3.0
 Tested Up To: 3.5
-Stable Tag: 0.3
+Stable Tag: 0.4
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -77,6 +77,10 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.4 =
+* Released December 2012
+* Prepared for extension plugins
+
 = 0.3 =
 * Released December 2012
 * Add "Current Date" classes
