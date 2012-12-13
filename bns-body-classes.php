@@ -14,8 +14,9 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 /**
  * BNS Body Classes
  *
- * Simple plugin that adds classes to the `body_class` output upon activation, including: a full list of date classes;
- * holiday classes ... and more to follow.
+ * Simple plugin that adds classes to the `body_class` output upon activation,
+ * including: a full list of date related classes; a few holiday classes; and,
+ * a generic sample full calendar extension.
  *
  * @package     BNS_Body_Classes
  *
@@ -190,4 +191,9 @@ class BNS_Body_Classes {
 $bns_body_classes = new BNS_Body_Classes();
 
 /** Add BNSBC Options */
-include 'bnsbc-options.php';
+include( 'bnsbc-options.php' );
+
+if ( is_readable( plugin_dir_path( __FILE__ ) . 'bnsbc-calendar.php' ) ) {
+    /** Add BNSBC Calendar */
+    include( 'bnsbc-calendar.php' );
+}

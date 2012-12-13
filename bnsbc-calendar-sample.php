@@ -1,19 +1,8 @@
 <?php
-/*
-Plugin Name: BNS Body Classes Calendar Extension
-Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
-Description: A sample extension to the BNS Body Classes plugin adding calendar classes
-Version: 0.4
-Text Domain: bns-bc
-Author: Edward Caissie
-Author URI: http://edwardcaissie.com/
-License: GNU General Public License v2
-License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-*/
-
 /**
  * BNS Body Classes Calendar Extension
- * An example extension to the BNS Body Classes plugin adding calendar classes
+ * An default (example) extension to the BNS Body Classes plugin adding a
+ * generic (read: blank) set of calendar / date-specific classes.
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Calendar
@@ -51,6 +40,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 /**
  * BNSBC Calendar
  *
+ * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Calendar
  * @since       0.4
  *
@@ -477,6 +467,10 @@ function bnsbc_calendar() {
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
     }
 
+    /** Note to, er class for, self */
+    $dates .= ' bnsbc-calendar';
+
+    /** Return the classes added above */
     return $dates;
 }
 

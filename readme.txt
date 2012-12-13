@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Simple plugin that adds classes to the `body_class` output upon activation, including a range of date related classes.
 
 == Description ==
-Simple plugin that adds classes to the `body_class` output upon activation, including: a full list of date classes; holiday classes ... and more to follow.
+Simple plugin that adds classes to the `body_class` output upon activation, including: a full list of date related classes; a few holiday classes; and, a generic sample full calendar extension.
 
 == Installation ==
 This section describes how to install the plugin and get it working.
@@ -48,6 +48,20 @@ on the site. These classes would include on December 1, 2012 at 5:00pm (GMT-5) t
 * hour-22
 * hour-10pm
 
+= How do I activate the calendar extension? =
+Included with the package is the file named 'bnsbc-calendar-sample.php'; simply rename this file to 'bnsbc-calendar.php', then edit it to add your own date-specific classes.
+
+As the specifically named file 'bnsbc-calendar.php' is not included with the standard plugin package it will survive any automatic updates via the WordPress Administration Panels.
+
+= How do I add a new class in the calendar extension? =
+After changing the sample file to 'bnsbc-calendar.php' simple find the date you want to add the class to and amend that line.
+
+For example, to add a class for the Ides of March you would edit the March 15 entry and add an appropriate class such as:
+
+* near line 138: if ( '15' == date( 'd' ) ) { $dates .= ''; } would change to if ( '15' == date( 'd' ) ) { $dates .= ' ides-of-march'; }
+
+NB: Remember to use "safe" characters for class names; and, add a single preceding space to eliminate the risk of classes running together.
+
 == Screenshots ==
 No screenshots are available.
 
@@ -80,10 +94,11 @@ Please stay current with your WordPress installation, your active theme, and you
 = 0.4 =
 * Released December 2012
 * Added conditional check on `option_classes`
-* Added generic calendar extension plugin
+* Added generic (sample) calendar extension
 * i18n updates
 * Prepared for extension plugins
 * Refactored options to more appropriate naming conventions
+* Updated descriptions and FAQ to reflect new features
 
 = 0.3 =
 * Released December 2012
