@@ -6,12 +6,11 @@
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Options
+ * @since       0.2
  *
  * @link        http://buynowshop.com/plugins/bns-body-classes/
  * @link        https://github.com/Cais/bns-body-classes/
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
- *
- * @since       0.2
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
  * @copyright   Copyright (c) 2012-2013, Edward Caissie
@@ -30,7 +29,6 @@
  * @date        April 1, 2013
  * Code formatting and code block termination comments
  *
- * @todo Add more options
  * @todo Sort out validations required (CSS class cannot start with a number, etc.)
  */
 
