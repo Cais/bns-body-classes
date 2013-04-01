@@ -3,8 +3,8 @@ Contributors: cais
 Donate Link: http://buynowshop.com/
 Tags: CSS, body, plugin-only
 Requires at least: 3.0
-Tested Up To: 3.5
-Stable Tag: 0.4
+Tested Up To: 3.5.1
+Stable Tag: 0.5
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -67,7 +67,7 @@ No screenshots are available.
 
 == Other Notes ==
 
-= Copyright 2012  Edward Caissie  (email : edward.caissie@gmail.com) =
+= Copyright 2012-2013  Edward Caissie  (email : edward.caissie@gmail.com) =
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License version 2,
@@ -91,6 +91,10 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.5 =
+* Released ...
+* Code formatting and code block termination comments
+
 = 0.4 =
 * Released December 2012
 * Added conditional check on `option_classes`

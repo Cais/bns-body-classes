@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation, including a full list of date classes.
-Version: 0.4
+Version: 0.5
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -19,15 +19,14 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * a generic sample full calendar extension.
  *
  * @package     BNS_Body_Classes
+ * @version     0.5
  *
  * @link        http://buynowshop.com/plugins/bns-body-classes/
  * @link        https://github.com/Cais/bns-body-classes/
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
- * @version     0.4
- *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012, Edward Caissie
+ * @copyright   Copyright (c) 2012-2013, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -59,14 +58,25 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @version 0.4
  * @date    December 11, 2012
  * Add generic sample calendar extension
+ *
+ * @version 0.5
+ * @date    April 1, 2013
+ * Code formatting and code block termination comments
  */
 
 class BNS_Body_Classes {
-    /** Constructor */
+    /**
+     * Constructor
+     *
+     * @package BNS_Body_Classes
+     *
+     * @uses    add_filter
+     */
     function __construct() {
         /** Add Body Classes */
         add_filter( 'body_class', array( $this, 'bns_body_classes' ) );
-    }
+    } /** End function - constructor */
+
 
     /**
      * BNS Body Classes
@@ -80,7 +90,6 @@ class BNS_Body_Classes {
      *
      * @return  array - $classes, an array of classes to be added to `body_class`
      */
-
     function bns_body_classes( $classes ) {
         /** Add self reference to default body classes; also serves as very simple example */
         $classes[] = 'plugin-bns-body-classes';
@@ -88,7 +97,7 @@ class BNS_Body_Classes {
         /** Add child-theme-<Name> to default body classes */
         if ( is_child_theme() ) {
             $classes[] = 'child-theme-' . sanitize_html_class( get_option( 'stylesheet' ) );
-        }
+        } /** End if - is child theme */
 
         /** Add theme-<Name> to default body classes */
         $classes[] = 'theme-' . sanitize_html_class( get_option( 'template' ) );
@@ -107,7 +116,9 @@ class BNS_Body_Classes {
         $classes = apply_filters( 'bns_body_classes', $classes );
 
         return $classes;
-    }
+
+    } /** End function - bns body classes */
+
 
     /**
      * Current Dates
@@ -128,7 +139,7 @@ class BNS_Body_Classes {
         $leap_year = date( 'L' );
         if ( '1' == $leap_year ) {
             $date_classes .= ' leap-year';
-        }
+        } /** End if - leap year */
         /** Month */
         $current_month_numeric = date( 'm' );
         $date_classes .= ' month-' . $current_month_numeric;
@@ -150,7 +161,9 @@ class BNS_Body_Classes {
         $date_classes .= ' hour-' . $current_12_hour;
 
         return $date_classes;
-    }
+
+    } /** End function - current dates */
+
 
     /**
      * Holidays
@@ -173,54 +186,60 @@ class BNS_Body_Classes {
         /** New Year's Day */
         if ( ( '01' == date( 'm' ) ) && ( '01' == date( 'd' ) ) && ( 18 < date( 'H' ) ) ) {
             $holidays .= ' new-years-eve';
-        }
+        } /** End if - new years eve */
         if ( ( '01' == date( 'm' ) ) && ( '01' == date( 'd' ) ) ) {
             $holidays .= ' new-years new-years-day';
-        }
+        } /** End if - new years day */
 
         /** Valentine's Day */
         if ( ( '02' == date( 'm' ) ) && ( '14' == date( 'd' ) ) ) {
             $holidays .= ' valentines-day saint-valentines-day';
-        }
+        } /** End if - valentines day */
 
         /** St. Patrick's Day */
         if ( ( '03' == date( 'm' ) ) && ( '17' == date( 'd' ) ) ) {
             $holidays .= ' st-patricks-day';
-        }
+        } /** End if - st patricks day */
 
         /** April Fool's Day */
         if ( ( '04' == date( 'm' ) ) && ( '01' == date( 'd' ) ) ) {
             $holidays .= ' april-fools-day';
-        }
+        } /** End if - april fools day */
 
         /** Halloween */
         if ( ( '10' == date( 'm' ) ) && ( '31' == date( 'd' ) ) ) {
             $holidays .= ' halloween';
-        }
+        } /** End if - halloween */
 
         /** Remembrance Day */
         if ( ( '11' == date( 'm' ) ) && ( '11' == date( 'd' ) ) ) {
             $holidays .= ' remembrance-day poppy-day armistice-day veterans-day';
-        }
+        } /** End if - remembrance day */
 
         /** Christmas */
         if ( ( '12' == date( 'm' ) ) && ( '24' == date( 'd' ) ) && ( 18 < ( date( 'H' ) ) ) ) {
             $holidays .= ' christmas-eve';
-        }
+        } /** End if - Christmas eve */
         if ( ( '12' == date( 'm' ) ) && ( '25' == date( 'd' ) ) ) {
             $holidays .= ' christmas christmas-day';
-        }
+        } /** End if - Christmas day */
 
         return $holidays;
 
-    }
-}
+    } /** End function - holidays */
+
+} /** End class - bns body classes */
+
+
+/** @var $bns_body_classes - new class instance */
 $bns_body_classes = new BNS_Body_Classes();
+
 
 /** Add BNSBC Options */
 include( 'bnsbc-options.php' );
 
+
 /** Add BNSBC Calendar if it is available */
 if ( is_readable( plugin_dir_path( __FILE__ ) . 'bnsbc-calendar.php' ) ) {
     include( 'bnsbc-calendar.php' );
-}
+} /** end if - is readable */
