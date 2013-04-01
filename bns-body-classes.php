@@ -243,3 +243,15 @@ include( 'bnsbc-options.php' );
 if ( is_readable( plugin_dir_path( __FILE__ ) . 'bnsbc-calendar.php' ) ) {
     include( 'bnsbc-calendar.php' );
 } /** end if - is readable */
+
+/** Common 2013 Calendars */
+if ( '2013' == date( 'Y' ) ) {
+    include( 'bnsbc-2013-christian-calendar.php' );
+    include( 'bnsbc-2013-jewish-calendar.php' );
+} /** End if - year is 2013 */
+
+/** Common 2014 Calendars */
+if ( '2014' == date( 'Y' ) ) {
+    include( 'bnsbc-2014-christian-calendar.php' );
+    include( 'bnsbc-2014-jewish-calendar.php' );
+} /** End if - year is 2014 */

@@ -92,8 +92,10 @@ Please stay current with your WordPress installation, your active theme, and you
 
 == Changelog ==
 = 0.5 =
-* Released ...
+* Released April 2013
 * Added additional related tags to header block
+* Added Christian Calendars for the years 2013 and 2014
+* Added Jewish Calendars for the years 2013 and 2014
 * Code formatting and code block termination comments
 
 = 0.4 =
