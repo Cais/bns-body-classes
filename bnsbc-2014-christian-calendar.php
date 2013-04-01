@@ -46,7 +46,7 @@
  *
  * @return      string - classes as defined by dates
  */
-function bnsbc_calendar() {
+function bnsbc_christian_calendar() {
     $dates = '';
     /** January */
     if ( '01' == date( 'm' ) ) {
