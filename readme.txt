@@ -1,7 +1,7 @@
 === BNS Body Classes ===
 Contributors: cais
 Donate Link: http://buynowshop.com/
-Tags: CSS, body, plugin-only
+Tags: CSS, body, plugin-only, holidays, seasonal, observances, calendar
 Requires at least: 3.0
 Tested Up To: 3.5.1
 Stable Tag: 0.5
@@ -93,6 +93,7 @@ Please stay current with your WordPress installation, your active theme, and you
 == Changelog ==
 = 0.5 =
 * Released ...
+* Added additional related tags to header block
 * Code formatting and code block termination comments
 
 = 0.4 =
