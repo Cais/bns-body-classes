@@ -6,15 +6,14 @@
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Calendar
+ * @since       0.4
  *
  * @link        http://buynowshop.com/plugins/bns-body-classes/
  * @link        https://github.com/Cais/bns-body-classes/
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
- * @version     0.1
- *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012, Edward Caissie
+ * @copyright   Copyright (c) 2012-2013, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -84,7 +83,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - January */
 
     /** February */
     if ( '02' == date( 'm' ) ) {
@@ -117,7 +116,7 @@ function bnsbc_calendar() {
         if ( '27' == date( 'd' ) ) { $dates .= ''; }
         if ( '28' == date( 'd' ) ) { $dates .= ''; }
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - February */
 
     /** March */
     if ( '03' == date( 'm' ) ) {
@@ -152,7 +151,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - March */
 
     /** April */
     if ( '04' == date( 'm' ) ) {
@@ -186,7 +185,7 @@ function bnsbc_calendar() {
         if ( '28' == date( 'd' ) ) { $dates .= ''; }
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - April */
 
     /** May */
     if ( '05' == date( 'm' ) ) {
@@ -221,7 +220,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - May */
 
     /** June */
     if ( '01' == date( 'm' ) ) {
@@ -255,7 +254,7 @@ function bnsbc_calendar() {
         if ( '28' == date( 'd' ) ) { $dates .= ''; }
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - June */
 
     /** July */
     if ( '07' == date( 'm' ) ) {
@@ -290,7 +289,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - July */
 
     /** August */
     if ( '08' == date( 'm' ) ) {
@@ -325,7 +324,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - August */
 
     /** September */
     if ( '09' == date( 'm' ) ) {
@@ -360,7 +359,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - September */
 
     /** October */
     if ( '10' == date( 'm' ) ) {
@@ -395,7 +394,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - October */
 
     /** November */
     if ( '11' == date( 'm' ) ) {
@@ -430,7 +429,7 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - November */
 
     /** December */
     if ( '12' == date( 'm' ) ) {
@@ -465,14 +464,16 @@ function bnsbc_calendar() {
         if ( '29' == date( 'd' ) ) { $dates .= ''; }
         if ( '30' == date( 'd' ) ) { $dates .= ''; }
         if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    }
+    } /** End if - December */
 
     /** Note to, er class for, self */
     $dates .= ' bnsbc-calendar';
 
     /** Return the classes added above */
     return $dates;
-}
+
+} /** End function - bnsbc calendar */
+
 
 /** Add to hook in parent plugin BNS Body Classes */
 add_filter( 'bnsbc_more_classes', 'bnsbc_calendar' );
