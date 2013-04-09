@@ -19,7 +19,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * a generic sample full calendar extension.
  *
  * @package     BNS_Body_Classes
- * @version     0.5
+ * @version     0.5.2
  *
  * @link        http://buynowshop.com/plugins/bns-body-classes/
  * @link        https://github.com/Cais/bns-body-classes/
