@@ -33,6 +33,10 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version     0.5.2
+ * @date        April 9, 2013
+ * Added $classes parameter to be able to append new date classes to
  */
 
 /**
@@ -44,9 +48,15 @@
  *
  * @internal Dates are relevant to the year 2014
  *
+ * @param       $classes - existing body classes
+ *
  * @return      string - classes as defined by dates
+ *
+ * @version     0.5.2
+ * @date        April 9, 2013
+ * Added $classes parameter to be able to append new date classes to
  */
-function bnsbc_christian_calendar() {
+function bnsbc_christian_calendar( $classes ) {
     $dates = '';
     /** January */
     if ( '01' == date( 'm' ) ) {
@@ -106,8 +116,10 @@ function bnsbc_christian_calendar() {
     /** Note to, er class for, self */
     $dates .= ' bnsbc-christian-calendar';
 
+    $classes .= $dates;
+
     /** Return the classes added above */
-    return $dates;
+    return $classes;
 
 } /** End function - christian calendar */
 

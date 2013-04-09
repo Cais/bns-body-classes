@@ -91,6 +91,10 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.5.2 =
+* Released April 2013
+* Added $classes parameter in calendars to be able to append new date classes
+
 = 0.5.1 =
 * Released April 2013
 * Fixed wrong function being called by action hook
