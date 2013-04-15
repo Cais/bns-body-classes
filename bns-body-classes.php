@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation, including a full list of date classes.
-Version: 0.5.2
+Version: 0.6
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -19,7 +19,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * a generic sample full calendar extension.
  *
  * @package     BNS_Body_Classes
- * @version     0.5.2
+ * @version     0.6
  *
  * @link        http://buynowshop.com/plugins/bns-body-classes/
  * @link        https://github.com/Cais/bns-body-classes/
@@ -52,20 +52,17 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @internal    Project To-Do List
  * @todo add options to specify when custom class is applied (i.e.: which template types it applies to)
  *
- * @version 0.3
- * @date    December 1, 2012
- *
- * @version 0.4
- * @date    December 11, 2012
- * Add generic sample calendar extension
- *
  * @version 0.5
  * @date    April 1, 2013
  * Code formatting and code block termination comments
  *
- * @version     0.5.2
- * @date        April 9, 2013
+ * @version 0.5.2
+ * @date    April 9, 2013
  * Added $classes parameter in calendars to be able to append new date classes
+ *
+ * @version 0.6
+ * @date    April 15, 2013
+ * Added Muslim calendars for 2013 and 2014
  */
 
 class BNS_Body_Classes {
@@ -252,10 +249,12 @@ if ( is_readable( plugin_dir_path( __FILE__ ) . 'bnsbc-calendar.php' ) ) {
 if ( '2013' == date( 'Y' ) ) {
     include( 'bnsbc-2013-christian-calendar.php' );
     include( 'bnsbc-2013-jewish-calendar.php' );
+    include( 'bnsbc-2013-muslim-calendar.php' );
 } /** End if - year is 2013 */
 
 /** Common 2014 Calendars */
 if ( '2014' == date( 'Y' ) ) {
     include( 'bnsbc-2014-christian-calendar.php' );
     include( 'bnsbc-2014-jewish-calendar.php' );
+    include( 'bnsbc-2014-muslim-calendar.php' );
 } /** End if - year is 2014 */
