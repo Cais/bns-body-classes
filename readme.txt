@@ -92,10 +92,10 @@ Please stay current with your WordPress installation, your active theme, and you
 
 == Changelog ==
 = 0.6 =
-* Released ...
+* Released July 2013
 * Added Muslim calendars for 2013 and 2014
 * Added conditional check to only add if there are actual dates being recognized
-* Refactored init functions into their own their own method to be called
+* Refactored option function calls into their own function to prepare for future options
 
 = 0.5.2 =
 * Released April 2013

@@ -34,6 +34,7 @@
  * Refactored init functions into their own their own method to be called
  *
  * @todo Sort out validations required (CSS class cannot start with a number, etc.)
+ * @todo Add checkbox options for the Calendar related classes
  */
 
 /**
@@ -155,7 +156,7 @@ function add_bnsbc_custom_classes() {
  * @uses        __
  */
 function add_custom_classes_text() {
-    $text = 'Enter your custom classes into the text field and click the "Save Changes" button.';
+    $text = 'Enter your custom classes (separated by commas) into the text field and click the "Save Changes" button.';
     printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
 } /** End function - add custom classes text */
 
