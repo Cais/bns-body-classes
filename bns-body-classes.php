@@ -18,15 +18,15 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * including: a full list of date related classes; a few holiday classes; and,
  * a generic sample full calendar extension.
  *
- * @package     BNS_Body_Classes
- * @version     0.7
+ * @package        BNS_Body_Classes
+ * @version        0.7
  *
- * @link        http://buynowshop.com/plugins/bns-body-classes/
- * @link        https://github.com/Cais/bns-body-classes/
- * @link        http://wordpress.org/extend/plugins/bns-body-classes
+ * @link           http://buynowshop.com/plugins/bns-body-classes/
+ * @link           https://github.com/Cais/bns-body-classes/
+ * @link           http://wordpress.org/extend/plugins/bns-body-classes
  *
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Edward Caissie
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2012-2013, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -48,23 +48,23 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @internal    Project To-Do List
- * @todo        add option to specify what faith classes are applied
+ * @internal       Project To-Do List
+ * @todo           add option to specify what faith classes are applied
  *
- * @version     0.5
- * @date        April 1, 2013
+ * @version        0.5
+ * @date           April 1, 2013
  * Code formatting and code block termination comments
  *
- * @version     0.5.2
- * @date        April 9, 2013
+ * @version        0.5.2
+ * @date           April 9, 2013
  * Added $classes parameter in calendars to be able to append new date classes
  *
- * @version     0.6
- * @date        April 15, 2013
+ * @version        0.6
+ * @date           April 15, 2013
  * Added Muslim calendars for 2013 and 2014
  *
- * @version		0.7
- * @date		December 2013
+ * @version        0.7
+ * @date           December 2013
  * Code reformatting and version compatibility update
  * Added 2015 calendars and updated 2014 Muslim calendar
  */

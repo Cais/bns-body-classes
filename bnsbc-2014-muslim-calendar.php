@@ -3,16 +3,16 @@
  * BNS Body Classes Calendar Extension - Muslim Calendar
  * Muslim calendar for the year 2014
  *
- * @package     BNS_Body_Classes
- * @subpackage  BNSBC_Calendar
- * @since       0.4
+ * @package        BNS_Body_Classes
+ * @subpackage     BNSBC_Calendar
+ * @since          0.4
  *
- * @link        http://buynowshop.com/plugins/bns-body-classes/
- * @link        https://github.com/Cais/bns-body-classes/
- * @link        http://wordpress.org/extend/plugins/bns-body-classes
+ * @link           http://buynowshop.com/plugins/bns-body-classes/
+ * @link           https://github.com/Cais/bns-body-classes/
+ * @link           http://wordpress.org/extend/plugins/bns-body-classes
  *
- * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Edward Caissie
+ * @author         Edward Caissie <edward.caissie@gmail.com>
+ * @copyright      Copyright (c) 2012-2013, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -34,12 +34,12 @@
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * @version     0.5.2
- * @date        April 9, 2013
+ * @version        0.5.2
+ * @date           April 9, 2013
  * Added $classes parameter to be able to append new date classes to
  *
- * @version		0.7
- * @date		December 30, 2013
+ * @version        0.7
+ * @date           December 30, 2013
  * Correct description and title for file
  * Added `night-of-destiny` to Laylat al-Qadr (July 24, 2014)
  */
