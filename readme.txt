@@ -95,7 +95,8 @@ Please stay current with your WordPress installation, your active theme, and you
 = 0.7 =
 * Released December 2013
 * Code Reformatting to be more consistent with WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
-* Updated `readme.txt` FAQ with a reminder to keep a back-up of any custom 'bnsbc-calendar.php' file(s).
+* Updated `readme.txt` FAQ with a reminder to keep a back-up of any custom 'bnsbc-calendar.php' file(s)
+* Added 2015 Calendars and updated Muslim 2014 calendar
 
 = 0.6 =
 * Released July 2013
