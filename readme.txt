@@ -51,7 +51,8 @@ on the site. These classes would include on December 1, 2012 at 5:00pm (GMT-5) t
 = How do I activate the calendar extension? =
 Included with the package is the file named 'bnsbc-calendar-sample.php'; simply rename this file to 'bnsbc-calendar.php', then edit it to add your own date-specific classes.
 
-As the specifically named file 'bnsbc-calendar.php' is not included with the standard plugin package it will survive any automatic updates via the WordPress Administration Panels.
+As the specifically named file 'bnsbc-calendar.php' is not included with the standard plugin package it should survive any automatic updates via the WordPress Administration Panels.
+Just in case, it is recommended to keep a backup of your custom calendar in case it is lost from your site for whatever reason.
 
 = How do I add a new class in the calendar extension? =
 After changing the sample file to 'bnsbc-calendar.php' simple find the date you want to add the class to and amend that line.
@@ -94,6 +95,7 @@ Please stay current with your WordPress installation, your active theme, and you
 = 0.7 =
 * Released December 2013
 * Code Reformatting to be more consistent with WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
+* Updated `readme.txt` FAQ with a reminder to keep a back-up of any custom 'bnsbc-calendar.php' file(s).
 
 = 0.6 =
 * Released July 2013
