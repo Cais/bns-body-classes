@@ -48,9 +48,8 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Last revised January 29, 2012
  * @internal    Project To-Do List
- * @todo        add options to specify when custom class is applied (i.e.: which template types it applies to)
+ * @todo        add option to specify what faith classes are applied
  *
  * @version     0.5
  * @date        April 1, 2013
@@ -63,6 +62,11 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @version     0.6
  * @date        April 15, 2013
  * Added Muslim calendars for 2013 and 2014
+ *
+ * @version		0.7
+ * @date		December 2013
+ * Code reformatting and version compatibility update
+ * Added 2015 calendars and updated 2014 Muslim calendar
  */
 
 class BNS_Body_Classes {
@@ -280,4 +284,13 @@ if ( '2014' == date( 'Y' ) ) {
 	include( 'bnsbc-2014-christian-calendar.php' );
 	include( 'bnsbc-2014-jewish-calendar.php' );
 	include( 'bnsbc-2014-muslim-calendar.php' );
-} /** End if - year is 2014 */
+}
+/** End if - year is 2014 */
+
+/** Common 2015 Calendars */
+if ( '2015' == date( 'Y' ) ) {
+	include( 'bnsbc-2015-christian-calendar.php' );
+	include( 'bnsbc-2015-jewish-calendar.php' );
+	include( 'bnsbc-2015-muslim-calendar.php' );
+}
+/** End if - year is 2015 */
