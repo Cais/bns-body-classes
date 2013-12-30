@@ -33,8 +33,8 @@
  * @date        July 14, 2013
  * Refactored init functions into their own their own method to be called
  *
- * @todo Sort out validations required (CSS class cannot start with a number, etc.)
- * @todo Add checkbox options for the Calendar related classes
+ * @todo        Sort out validations required (CSS class cannot start with a number, etc.)
+ * @todo        Add checkbox options for the Calendar related classes
  */
 
 /**
@@ -47,14 +47,16 @@
  * @uses        add_options_page
  */
 function bnsbc_add_admin_page() {
-    add_options_page(
-        'BNS Body Classes',
-        'BNS Body Classes',
-        'manage_options',
-        'bnsbc',
-        'bnsbc_options_page'
-    );
-} /** End function - add admin page */
+	add_options_page(
+		'BNS Body Classes',
+		'BNS Body Classes',
+		'manage_options',
+		'bnsbc',
+		'bnsbc_options_page'
+	);
+}
+
+/** End function - add admin page */
 add_action( 'admin_menu', 'bnsbc_add_admin_page' );
 
 
@@ -70,28 +72,33 @@ add_action( 'admin_menu', 'bnsbc_add_admin_page' );
  * @uses        esc_attr_e
  * @uses        settings_fields
  */
-function bnsbc_options_page() { ?>
+function bnsbc_options_page() {
+	?>
 
-    <div>
-        <h2>
-            <?php _e( 'BNS Body Classes Options and Settings', 'bns-bc' ); ?>
-        </h2>
+	<div>
+		<h2>
+			<?php _e( 'BNS Body Classes Options and Settings', 'bns-bc' ); ?>
+		</h2>
 
-        <?php _e( 'Options and settings related to the BNS Body Classes plugin.', 'bns-bc' ); ?>
+		<?php _e( 'Options and settings related to the BNS Body Classes plugin.', 'bns-bc' ); ?>
 
-        <form action="options.php" method="post">
+		<form action="options.php" method="post">
 
-            <?php
-            settings_fields( 'bnsbc_custom_classes' );
-            do_settings_sections( 'bnsbc' ); ?>
+			<?php
+			settings_fields( 'bnsbc_custom_classes' );
+			do_settings_sections( 'bnsbc' ); ?>
 
-            <input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
+			<input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
 
-        </form><!-- End form -->
+		</form>
+		<!-- End form -->
 
-    </div>
+	</div>
 
-<?php } /** End function - options page */
+<?php
+}
+
+/** End function - options page */
 
 
 /**
@@ -104,10 +111,12 @@ function bnsbc_options_page() { ?>
  * @uses        add_bnsbc_custom_classes
  */
 function bnsbc_admin_init() {
-    /** Add BNSBC Custom Classes */
-    add_bnsbc_custom_classes();
+	/** Add BNSBC Custom Classes */
+	add_bnsbc_custom_classes();
 
-} /** End function - admin init */
+}
+
+/** End function - admin init */
 add_action( 'admin_init', 'bnsbc_admin_init' );
 
 
@@ -124,26 +133,28 @@ add_action( 'admin_init', 'bnsbc_admin_init' );
  * @uses        register_setting
  */
 function add_bnsbc_custom_classes() {
-    /** Add Custom Classes Option */
-    register_setting(
-        'bnsbc_custom_classes',
-        'bnsbc_custom_classes_field',
-        'bnsbc_custom_classes_validator'
-    );
-    add_settings_section(
-        'add_custom_classes',
-        __( 'Add Custom Classes', 'bns-bc' ),
-        'add_custom_classes_text',
-        'bnsbc'
-    );
-    add_settings_field(
-        'custom_classes_text_string',
-        __( 'Custom Classes', 'bns-bc' ),
-        'custom_classes_input',
-        'bnsbc',
-        'add_custom_classes'
-    );
-} /** End function - add bnsbc custom classes */
+	/** Add Custom Classes Option */
+	register_setting(
+		'bnsbc_custom_classes',
+		'bnsbc_custom_classes_field',
+		'bnsbc_custom_classes_validator'
+	);
+	add_settings_section(
+		'add_custom_classes',
+		__( 'Add Custom Classes', 'bns-bc' ),
+		'add_custom_classes_text',
+		'bnsbc'
+	);
+	add_settings_field(
+		'custom_classes_text_string',
+		__( 'Custom Classes', 'bns-bc' ),
+		'custom_classes_input',
+		'bnsbc',
+		'add_custom_classes'
+	);
+}
+
+/** End function - add bnsbc custom classes */
 
 
 /**
@@ -156,9 +167,11 @@ function add_bnsbc_custom_classes() {
  * @uses        __
  */
 function add_custom_classes_text() {
-    $text = 'Enter your custom classes (separated by commas) into the text field and click the "Save Changes" button.';
-    printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
-} /** End function - add custom classes text */
+	$text = 'Enter your custom classes (separated by commas) into the text field and click the "Save Changes" button.';
+	printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
+}
+
+/** End function - add custom classes text */
 
 
 /**
@@ -171,9 +184,11 @@ function add_custom_classes_text() {
  * @uses        get_option
  */
 function custom_classes_input() {
-    $options = get_option( 'bnsbc_custom_classes_field' );
-    echo "<input id='custom_classes_text_string' name='bnsbc_custom_classes_field[text_string]' size='40' type='text' value='{$options['text_string']}' />";
-} /** End function - custom classes input */
+	$options = get_option( 'bnsbc_custom_classes_field' );
+	echo "<input id='custom_classes_text_string' name='bnsbc_custom_classes_field[text_string]' size='40' type='text' value='{$options['text_string']}' />";
+}
+
+/** End function - custom classes input */
 
 
 /**
@@ -186,10 +201,13 @@ function custom_classes_input() {
  * @uses        get_option
  */
 function bnsbc_custom_classes_validator( $input ) {
-    $options = get_option( 'bnsbc_custom_classes_field' );
-    $options['text_string'] = trim( $input['text_string'] );
-    return $options;
-} /** End function - custom classes validator */
+	$options                = get_option( 'bnsbc_custom_classes_field' );
+	$options['text_string'] = trim( $input['text_string'] );
+
+	return $options;
+}
+
+/** End function - custom classes validator */
 
 
 /**
@@ -197,7 +215,9 @@ function bnsbc_custom_classes_validator( $input ) {
  * Add classes set in the BNS Body Classes Options page
  *
  * @since   0.2
+ *
  * @param   $classes
+ *
  * @return  array
  *
  * @version 0.2.1
@@ -208,19 +228,23 @@ function bnsbc_custom_classes_validator( $input ) {
  * Added conditional check on `option_classes`
  */
 function bnsbc_option_classes( $classes ) {
-    $option_classes = get_option( 'bnsbc_custom_classes_field' );
-    if ( $option_classes ) {
-        /** Convert array to string */
-        $added_classes = strtolower( implode( ' ', $option_classes ) );
-        /** Replace commas with spaces */
-        $added_classes = preg_replace( '/[,]/', ' ', $added_classes );
-        /** Replace whitespace with a single space */
-        $added_classes = preg_replace( '/\s\s+/', ' ', $added_classes );
-        /** Add to $classes and return */
-        $classes[] = $added_classes;
-    } /** End if - option classes */
+	$option_classes = get_option( 'bnsbc_custom_classes_field' );
+	if ( $option_classes ) {
+		/** Convert array to string */
+		$added_classes = strtolower( implode( ' ', $option_classes ) );
+		/** Replace commas with spaces */
+		$added_classes = preg_replace( '/[,]/', ' ', $added_classes );
+		/** Replace whitespace with a single space */
+		$added_classes = preg_replace( '/\s\s+/', ' ', $added_classes );
+		/** Add to $classes and return */
+		$classes[] = $added_classes;
+	}
 
-    return $classes;
+	/** End if - option classes */
 
-} /** End function - options classes */
+	return $classes;
+
+}
+
+/** End function - options classes */
 add_filter( 'body_class', 'bnsbc_option_classes' );

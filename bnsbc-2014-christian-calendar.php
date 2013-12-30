@@ -42,7 +42,7 @@
  * @subpackage  BNSBC_Christain_Calendar
  * @since       0.5
  *
- * @internal Dates are relevant to the year 2014
+ * @internal    Dates are relevant to the year 2014
  *
  * @param       $classes - existing body classes
  *
@@ -57,72 +57,124 @@
  * Add conditional check to only add if there are actual dates being recognized
  */
 function bnsbc_christian_calendar( $classes ) {
-    $dates = '';
-    /** January */
-    if ( '01' == date( 'm' ) ) {
-        if ( '06' == date( 'd' ) ) { $dates .= ' epiphany'; }
-    } /** End if - January */
+	$dates = '';
+	/** January */
+	if ( '01' == date( 'm' ) ) {
+		if ( '06' == date( 'd' ) ) {
+			$dates .= ' epiphany';
+		}
+	}
+	/** End if - January */
 
-    /** March */
-    if ( '03' == date( 'm' ) ) {
-        if ( '04' == date( 'd' ) ) { $dates .= ' carnival shrove-tuesday'; }
-        if ( '05' == date( 'd' ) ) { $dates .= ' ash-wednesday'; }
-    } /** End if - March */
+	/** March */
+	if ( '03' == date( 'm' ) ) {
+		if ( '04' == date( 'd' ) ) {
+			$dates .= ' carnival shrove-tuesday';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= ' ash-wednesday';
+		}
+	}
+	/** End if - March */
 
-    /** April */
-    if ( '04' == date( 'm' ) ) {
-        if ( '13' == date( 'd' ) ) { $dates .= ' palm-sunday'; }
-        if ( '17' == date( 'd' ) ) { $dates .= ' maundy-thursday'; }
-        if ( '18' == date( 'd' ) ) { $dates .= ' good-friday'; }
-        if ( '19' == date( 'd' ) ) { $dates .= ' holy-saturday'; }
-        if ( '20' == date( 'd' ) ) { $dates .= ' easter-sunday'; }
-        if ( '21' == date( 'd' ) ) { $dates .= ' easter-monday'; }
-    } /** End if - April */
+	/** April */
+	if ( '04' == date( 'm' ) ) {
+		if ( '13' == date( 'd' ) ) {
+			$dates .= ' palm-sunday';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= ' maundy-thursday';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= ' good-friday';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= ' holy-saturday';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= ' easter-sunday';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= ' easter-monday';
+		}
+	}
+	/** End if - April */
 
-    /** May */
-    if ( '05' == date( 'm' ) ) {
-        if ( '29' == date( 'd' ) ) { $dates .= ' ascension-day'; }
-    } /** End if - May */
+	/** May */
+	if ( '05' == date( 'm' ) ) {
+		if ( '29' == date( 'd' ) ) {
+			$dates .= ' ascension-day';
+		}
+	}
+	/** End if - May */
 
-    /** June */
-    if ( '01' == date( 'm' ) ) {
-        if ( '08' == date( 'd' ) ) { $dates .= ' pentecost'; }
-        if ( '09' == date( 'd' ) ) { $dates .= ' whit-monday'; }
-        if ( '15' == date( 'd' ) ) { $dates .= ' trinity-sunday'; }
-        if ( '19' == date( 'd' ) ) { $dates .= ' corpus-christi'; }
-    } /** End if - June */
+	/** June */
+	if ( '01' == date( 'm' ) ) {
+		if ( '08' == date( 'd' ) ) {
+			$dates .= ' pentecost';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= ' whit-monday';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= ' trinity-sunday';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= ' corpus-christi';
+		}
+	}
+	/** End if - June */
 
-    /** August */
-    if ( '08' == date( 'm' ) ) {
-        if ( '15' == date( 'd' ) ) { $dates .= ' assumption-of-mary'; }
-    } /** End if - August */
+	/** August */
+	if ( '08' == date( 'm' ) ) {
+		if ( '15' == date( 'd' ) ) {
+			$dates .= ' assumption-of-mary';
+		}
+	}
+	/** End if - August */
 
-    /** October */
-    if ( '10' == date( 'm' ) ) {
-        if ( '04' == date( 'd' ) ) { $dates .= ' feast-of-st-francis-of-assisi'; }
-    } /** End if - October */
+	/** October */
+	if ( '10' == date( 'm' ) ) {
+		if ( '04' == date( 'd' ) ) {
+			$dates .= ' feast-of-st-francis-of-assisi';
+		}
+	}
+	/** End if - October */
 
-    /** November */
-    if ( '11' == date( 'm' ) ) {
-        if ( '02' == date( 'd' ) ) { $dates .= ' all-souls-day'; }
-    } /** End if - November */
+	/** November */
+	if ( '11' == date( 'm' ) ) {
+		if ( '02' == date( 'd' ) ) {
+			$dates .= ' all-souls-day';
+		}
+	}
+	/** End if - November */
 
-    /** December */
-    if ( '12' == date( 'm' ) ) {
-        if ( '08' == date( 'd' ) ) { $dates .= ' feast-of-the-immaculate-conception'; }
-        if ( '25' == date( 'd' ) ) { $dates .= ' christmas'; }
-    } /** End if - December */
+	/** December */
+	if ( '12' == date( 'm' ) ) {
+		if ( '08' == date( 'd' ) ) {
+			$dates .= ' feast-of-the-immaculate-conception';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= ' christmas';
+		}
+	}
+	/** End if - December */
 
-    /** Note to, er class for, self */
-    if ( ! empty( $dates ) ) {
-        $dates .= ' bnsbc-christian-calendar';
-        $classes .= $dates;
-    } /** end if - not empty */
+	/** Note to, er class for, self */
+	if ( ! empty( $dates ) ) {
+		$dates .= ' bnsbc-christian-calendar';
+		$classes .= $dates;
+	}
 
-    /** Return the classes added above */
-    return $classes;
+	/** end if - not empty */
 
-} /** End function - christian calendar */
+	/** Return the classes added above */
+
+	return $classes;
+
+}
+
+/** End function - christian calendar */
 
 
 /** Add to hook in parent plugin BNS Body Classes */

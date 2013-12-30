@@ -51,48 +51,73 @@
  * @return      string - classes as defined by dates
  */
 function bnsbc_muslim_calendar( $classes ) {
-    $dates = '';
-    /** January */
-    if ( '01' == date( 'm' ) ) {
-        if ( '24' == date( 'd' ) ) { $dates .= ' prophets-birthday'; }
-    } /** End if - January */
+	$dates = '';
+	/** January */
+	if ( '01' == date( 'm' ) ) {
+		if ( '24' == date( 'd' ) ) {
+			$dates .= ' prophets-birthday';
+		}
+	}
+	/** End if - January */
 
-    /** June */
-    if ( '01' == date( 'm' ) ) {
-        if ( '06' == date( 'd' ) ) { $dates .= ' isra-and-mi-raj'; }
-    } /** End if - June */
+	/** June */
+	if ( '01' == date( 'm' ) ) {
+		if ( '06' == date( 'd' ) ) {
+			$dates .= ' isra-and-mi-raj';
+		}
+	}
+	/** End if - June */
 
-    /** July */
-    if ( '07' == date( 'm' ) ) {
-        if ( '09' == date( 'd' ) ) { $dates .= ' ramadan-begins'; }
-    } /** End if - July */
+	/** July */
+	if ( '07' == date( 'm' ) ) {
+		if ( '09' == date( 'd' ) ) {
+			$dates .= ' ramadan-begins';
+		}
+	}
+	/** End if - July */
 
-    /** August */
-    if ( '08' == date( 'm' ) ) {
-        if ( '03' == date( 'd' ) ) { $dates .= ' laylat-al-qadr'; }
-        if ( '08' == date( 'd' ) ) { $dates .= ' eid-al-fitr'; }
-    } /** End if - August */
+	/** August */
+	if ( '08' == date( 'm' ) ) {
+		if ( '03' == date( 'd' ) ) {
+			$dates .= ' laylat-al-qadr';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= ' eid-al-fitr';
+		}
+	}
+	/** End if - August */
 
-    /** October */
-    if ( '10' == date( 'm' ) ) {
-        if ( '15' == date( 'd' ) ) { $dates .= ' eid-al-adha'; }
-    } /** End if - October */
+	/** October */
+	if ( '10' == date( 'm' ) ) {
+		if ( '15' == date( 'd' ) ) {
+			$dates .= ' eid-al-adha';
+		}
+	}
+	/** End if - October */
 
-    /** November */
-    if ( '11' == date( 'm' ) ) {
-        if ( '05' == date( 'd' ) ) { $dates .= ' muharram islamic-new-year'; }
-    } /** End if - November */
+	/** November */
+	if ( '11' == date( 'm' ) ) {
+		if ( '05' == date( 'd' ) ) {
+			$dates .= ' muharram islamic-new-year';
+		}
+	}
+	/** End if - November */
 
-    /** Note to, er class for, self */
-    if ( ! empty( $dates ) ) {
-        $dates .= ' bnsbc-muslim-calendar';
-        $classes .= $dates;
-    } /** End if - not empty */
+	/** Note to, er class for, self */
+	if ( ! empty( $dates ) ) {
+		$dates .= ' bnsbc-muslim-calendar';
+		$classes .= $dates;
+	}
 
-    /** Return the classes added above */
-    return $classes;
+	/** End if - not empty */
 
-} /** End function - bnsbc muslim calendar */
+	/** Return the classes added above */
+
+	return $classes;
+
+}
+
+/** End function - bnsbc muslim calendar */
 
 
 /** Add to hook in parent plugin BNS Body Classes */

@@ -55,44 +55,68 @@
  * @return      string - classes as defined by dates
  */
 function bnsbc_muslim_calendar( $classes ) {
-    $dates = '';
-    /** January */
-    if ( '01' == date( 'm' ) ) {
-        if ( '14' == date( 'd' ) ) { $dates .= ' prophets-birthday'; }
-    } /** End if - January */
+	$dates = '';
+	/** January */
+	if ( '01' == date( 'm' ) ) {
+		if ( '14' == date( 'd' ) ) {
+			$dates .= ' prophets-birthday';
+		}
+	}
+	/** End if - January */
 
-    /** May */
-    if ( '05' == date( 'm' ) ) {
-        if ( '27' == date( 'd' ) ) { $dates .= ' isra-and-mi-raj'; }
-    } /** End if - May */
+	/** May */
+	if ( '05' == date( 'm' ) ) {
+		if ( '27' == date( 'd' ) ) {
+			$dates .= ' isra-and-mi-raj';
+		}
+	}
+	/** End if - May */
 
-    /** June */
-    if ( '01' == date( 'm' ) ) {
-        if ( '29' == date( 'd' ) ) { $dates .= ' ramadan-begins'; }
-    } /** End if - June */
+	/** June */
+	if ( '01' == date( 'm' ) ) {
+		if ( '29' == date( 'd' ) ) {
+			$dates .= ' ramadan-begins';
+		}
+	}
+	/** End if - June */
 
-    /** July */
-    if ( '07' == date( 'm' ) ) {
-        if ( '24' == date( 'd' ) ) { $dates .= ' laylat-al-qadr'; }
-        if ( '29' == date( 'd' ) ) { $dates .= ' eid-al-fitr'; }
-    } /** End if - July */
+	/** July */
+	if ( '07' == date( 'm' ) ) {
+		if ( '24' == date( 'd' ) ) {
+			$dates .= ' laylat-al-qadr';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= ' eid-al-fitr';
+		}
+	}
+	/** End if - July */
 
-    /** October */
-    if ( '10' == date( 'm' ) ) {
-        if ( '05' == date( 'd' ) ) { $dates .= ' eid-al-adha'; }
-        if ( '25' == date( 'd' ) ) { $dates .= ' muharram islamic-new-year'; }
-    } /** End if - October */
+	/** October */
+	if ( '10' == date( 'm' ) ) {
+		if ( '05' == date( 'd' ) ) {
+			$dates .= ' eid-al-adha';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= ' muharram islamic-new-year';
+		}
+	}
+	/** End if - October */
 
-    /** Note to, er class for, self */
-    if ( ! empty( $dates ) ) {
-        $dates .= ' bnsbc-muslim-calendar';
-        $classes .= $dates;
-    } /** End if - not empty */
+	/** Note to, er class for, self */
+	if ( ! empty( $dates ) ) {
+		$dates .= ' bnsbc-muslim-calendar';
+		$classes .= $dates;
+	}
 
-    /** Return the classes added above */
-    return $classes;
+	/** End if - not empty */
 
-} /** End function - bnsbc muslim calendar */
+	/** Return the classes added above */
+
+	return $classes;
+
+}
+
+/** End function - bnsbc muslim calendar */
 
 
 /** Add to hook in parent plugin BNS Body Classes */

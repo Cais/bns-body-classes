@@ -3,8 +3,8 @@ Contributors: cais
 Donate Link: http://buynowshop.com/
 Tags: CSS, body, plugin-only, holidays, seasonal, observances, calendar
 Requires at least: 3.0
-Tested Up To: 3.6
-Stable Tag: 0.6
+Tested Up To: 3.8.1
+Stable Tag: 0.7
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -91,6 +91,10 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.7 =
+* Released December 2013
+* Code Reformatting to be more consistent with WordPress Coding Standards (see https://gist.github.com/Cais/8023722)
+
 = 0.6 =
 * Released July 2013
 * Added Muslim calendars for 2013 and 2014

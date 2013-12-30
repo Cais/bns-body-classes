@@ -59,432 +59,1183 @@
  * Added $classes parameter to be able to append new date classes to
  */
 function bnsbc_calendar( $classes ) {
-    $dates = '';
-    /** January */
-    if ( '01' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - January */
+	$dates = '';
+	/** January */
+	if ( '01' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - January */
 
-    /** February */
-    if ( '02' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - February */
+	/** February */
+	if ( '02' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - February */
 
-    /** March */
-    if ( '03' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - March */
+	/** March */
+	if ( '03' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - March */
 
-    /** April */
-    if ( '04' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - April */
+	/** April */
+	if ( '04' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - April */
 
-    /** May */
-    if ( '05' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - May */
+	/** May */
+	if ( '05' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - May */
 
-    /** June */
-    if ( '01' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - June */
+	/** June */
+	if ( '01' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - June */
 
-    /** July */
-    if ( '07' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - July */
+	/** July */
+	if ( '07' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - July */
 
-    /** August */
-    if ( '08' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - August */
+	/** August */
+	if ( '08' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - August */
 
-    /** September */
-    if ( '09' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - September */
+	/** September */
+	if ( '09' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - September */
 
-    /** October */
-    if ( '10' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - October */
+	/** October */
+	if ( '10' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - October */
 
-    /** November */
-    if ( '11' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - November */
+	/** November */
+	if ( '11' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - November */
 
-    /** December */
-    if ( '12' == date( 'm' ) ) {
-        if ( '01' == date( 'd' ) ) { $dates .= ''; }
-        if ( '02' == date( 'd' ) ) { $dates .= ''; }
-        if ( '03' == date( 'd' ) ) { $dates .= ''; }
-        if ( '04' == date( 'd' ) ) { $dates .= ''; }
-        if ( '05' == date( 'd' ) ) { $dates .= ''; }
-        if ( '06' == date( 'd' ) ) { $dates .= ''; }
-        if ( '07' == date( 'd' ) ) { $dates .= ''; }
-        if ( '08' == date( 'd' ) ) { $dates .= ''; }
-        if ( '09' == date( 'd' ) ) { $dates .= ''; }
-        if ( '10' == date( 'd' ) ) { $dates .= ''; }
-        if ( '11' == date( 'd' ) ) { $dates .= ''; }
-        if ( '12' == date( 'd' ) ) { $dates .= ''; }
-        if ( '13' == date( 'd' ) ) { $dates .= ''; }
-        if ( '14' == date( 'd' ) ) { $dates .= ''; }
-        if ( '15' == date( 'd' ) ) { $dates .= ''; }
-        if ( '16' == date( 'd' ) ) { $dates .= ''; }
-        if ( '17' == date( 'd' ) ) { $dates .= ''; }
-        if ( '18' == date( 'd' ) ) { $dates .= ''; }
-        if ( '19' == date( 'd' ) ) { $dates .= ''; }
-        if ( '20' == date( 'd' ) ) { $dates .= ''; }
-        if ( '21' == date( 'd' ) ) { $dates .= ''; }
-        if ( '22' == date( 'd' ) ) { $dates .= ''; }
-        if ( '23' == date( 'd' ) ) { $dates .= ''; }
-        if ( '24' == date( 'd' ) ) { $dates .= ''; }
-        if ( '25' == date( 'd' ) ) { $dates .= ''; }
-        if ( '26' == date( 'd' ) ) { $dates .= ''; }
-        if ( '27' == date( 'd' ) ) { $dates .= ''; }
-        if ( '28' == date( 'd' ) ) { $dates .= ''; }
-        if ( '29' == date( 'd' ) ) { $dates .= ''; }
-        if ( '30' == date( 'd' ) ) { $dates .= ''; }
-        if ( '31' == date( 'd' ) ) { $dates .= ''; }
-    } /** End if - December */
+	/** December */
+	if ( '12' == date( 'm' ) ) {
+		if ( '01' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '02' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '03' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '04' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '05' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '06' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '08' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '09' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '10' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '11' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '13' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '14' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '15' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '16' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '18' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '19' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '20' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '21' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '22' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '27' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= '';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= '';
+		}
+	}
+	/** End if - December */
 
-    /** Note to, er class for, self */
-    $dates .= ' bnsbc-calendar';
+	/** Note to, er class for, self */
+	$dates .= ' bnsbc-calendar';
 
-    $classes .= $dates;
+	$classes .= $dates;
 
-    /** Return the classes added above */
-    return $classes;
+	/** Return the classes added above */
 
-} /** End function - bnsbc calendar */
+	return $classes;
+
+}
+
+/** End function - bnsbc calendar */
 
 
 /** Add to hook in parent plugin BNS Body Classes */
