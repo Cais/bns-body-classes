@@ -13,7 +13,7 @@
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012-2013, Edward Caissie
+ * @copyright   Copyright (c) 2012-2014, Edward Caissie
  *
  * Thanks to Samuel Wood aka Otto42 and his post at http://ottopress.com/2009/wordpress-settings-api-tutorial
  *

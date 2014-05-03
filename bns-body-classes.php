@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation, including a full list of date classes.
-Version: 0.7
+Version: 0.7.1
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -19,14 +19,14 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * a generic sample full calendar extension.
  *
  * @package        BNS_Body_Classes
- * @version        0.7
+ * @version        0.7.1
  *
  * @link           http://buynowshop.com/plugins/bns-body-classes/
  * @link           https://github.com/Cais/bns-body-classes/
  * @link           http://wordpress.org/extend/plugins/bns-body-classes
  *
  * @author         Edward Caissie <edward.caissie@gmail.com>
- * @copyright      Copyright (c) 2012-2013, Edward Caissie
+ * @copyright      Copyright (c) 2012-2014, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -68,7 +68,6 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Code reformatting and version compatibility update
  * Added 2015 calendars and updated 2014 Muslim calendar
  */
-
 class BNS_Body_Classes {
 	/**
 	 * Constructor
