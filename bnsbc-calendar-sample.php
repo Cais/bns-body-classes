@@ -1,7 +1,7 @@
 <?php
 /**
  * BNS Body Classes Calendar Extension
- * An default (example) extension to the BNS Body Classes plugin adding a
+ * A default (example) extension to the BNS Body Classes plugin adding a
  * generic (read: blank) set of calendar / date-specific classes.
  *
  * @package     BNS_Body_Classes
@@ -34,10 +34,6 @@
  *
  * The license for this software can also likely be found here:
  * http://www.gnu.org/licenses/gpl-2.0.html
- *
- * @version     0.5.2
- * @date        April 9, 2013
- * Added $classes parameter to be able to append new date classes to
  */
 
 /**
