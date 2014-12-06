@@ -3,8 +3,8 @@ Contributors: cais
 Donate Link: http://buynowshop.com/
 Tags: CSS, body, plugin-only, holidays, seasonal, observances, calendar
 Requires at least: 3.0
-Tested Up To: 3.9
-Stable Tag: 0.7.1
+Tested Up To: 4.1
+Stable Tag: 0.8
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -92,6 +92,10 @@ No screenshots are available.
 Please stay current with your WordPress installation, your active theme, and your plugins.
 
 == Changelog ==
+= 0.8 =
+* Released ...
+* Added paths to `/bns-content/` for customizations
+
 = 0.7.1 =
 * Released May 2014
 * Update version compatibility

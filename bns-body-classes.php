@@ -3,7 +3,7 @@
 Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation, including a full list of date classes.
-Version: 0.7.1
+Version: 0.8
 Text Domain: bns-bc
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
@@ -74,9 +74,26 @@ class BNS_Body_Classes {
 	 *
 	 * @package BNS_Body_Classes
 	 *
+	 * @uses    (GLOBAL) WP_CONTENT_DIR
 	 * @uses    add_filter
+	 * @uses    content_url
+	 *
+	 * @version 0.8
+	 * @date    December 6, 2014
+	 * Added paths to `/bns-content/` for customizations
 	 */
 	function __construct() {
+
+		/** Define location for BNS plugin customizations */
+		if ( ! defined( 'BNS_CUSTOM_PATH' ) ) {
+			define( 'BNS_CUSTOM_PATH', WP_CONTENT_DIR . '/bns-customs/' );
+		}
+		/** end if - not defined */
+		if ( ! defined( 'BNS_CUSTOM_URL' ) ) {
+			define( 'BNS_CUSTOM_URL', content_url( '/bns-customs/' ) );
+		}
+		/** end if - not defined */
+
 		/** Add Body Classes */
 		add_filter( 'body_class', array( $this, 'bns_body_classes' ) );
 	}
