@@ -285,7 +285,13 @@ include( 'bnsbc-options.php' );
 if ( is_readable( plugin_dir_path( __FILE__ ) . 'bnsbc-calendar.php' ) ) {
 	include( 'bnsbc-calendar.php' );
 }
-/** end if - is readable */
+/** End if - is readable */
+
+/** Add BNSBC Calendar if it is available - update safe location */
+if ( is_readable( BNS_CUSTOM_URL . 'bnsbc-calendar.php' ) ) {
+	include( BNS_CUSTOM_URL . 'bnsbc-calendar.php' );
+}
+/** End if - is readable */
 
 /** Common 2013 Calendars */
 if ( '2013' == date( 'Y' ) ) {

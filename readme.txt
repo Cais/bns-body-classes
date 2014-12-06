@@ -95,6 +95,7 @@ Please stay current with your WordPress installation, your active theme, and you
 = 0.8 =
 * Released ...
 * Added paths to `/bns-content/` for customizations
+* Added update safe location for custom calendars
 
 = 0.7.1 =
 * Released May 2014
