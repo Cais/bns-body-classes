@@ -95,10 +95,11 @@ Please stay current with your WordPress installation, your active theme, and you
 
 == Changelog ==
 = 0.8 =
-* Released ...
+* Released December 2014
 * Added paths to `/bns-content/` for customizations
 * Added update safe location for custom calendars
 * Changed Text Domain from `bns-bc` to `bns-body-classes`
+* Removed 2013 calendars and references
 * Updated `readme.txt` to reference update safe location/folder
 
 = 0.7.1 =
