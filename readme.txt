@@ -54,6 +54,8 @@ Included with the package is the file named 'bnsbc-calendar-sample.php'; simply 
 As the specifically named file 'bnsbc-calendar.php' is not included with the standard plugin package it should survive any automatic updates via the WordPress Administration Panels.
 Just in case, it is recommended to keep a backup of your custom calendar in case it is lost from your site for whatever reason.
 
+This file should also be saved under /wp-content/bns-customs/ as the safest update location.
+
 = How do I add a new class in the calendar extension? =
 After changing the sample file to 'bnsbc-calendar.php' simple find the date you want to add the class to and amend that line.
 
@@ -96,6 +98,7 @@ Please stay current with your WordPress installation, your active theme, and you
 * Released ...
 * Added paths to `/bns-content/` for customizations
 * Added update safe location for custom calendars
+* Updated `readme.txt` to reference update safe location/folder
 
 = 0.7.1 =
 * Released May 2014
