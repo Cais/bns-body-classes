@@ -4,7 +4,7 @@ Plugin Name: BNS Body Classes
 Plugin URI: http://buynowshop.com/plugins/bns-body-classes/
 Description: Simple plugin that adds classes to the `body_class` output upon activation, including a full list of date classes.
 Version: 0.8
-Text Domain: bns-bc
+Text Domain: bns-body-classes
 Author: Edward Caissie
 Author URI: http://edwardcaissie.com/
 License: GNU General Public License v2
@@ -19,7 +19,7 @@ License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * a generic sample full calendar extension.
  *
  * @package        BNS_Body_Classes
- * @version        0.7.1
+ * @version        0.8
  *
  * @link           http://buynowshop.com/plugins/bns-body-classes/
  * @link           https://github.com/Cais/bns-body-classes/

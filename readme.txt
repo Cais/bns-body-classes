@@ -98,6 +98,7 @@ Please stay current with your WordPress installation, your active theme, and you
 * Released ...
 * Added paths to `/bns-content/` for customizations
 * Added update safe location for custom calendars
+* Changed Text Domain from `bns-bc` to `bns-body-classes`
 * Updated `readme.txt` to reference update safe location/folder
 
 = 0.7.1 =

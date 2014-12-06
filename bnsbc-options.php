@@ -77,10 +77,10 @@ function bnsbc_options_page() {
 
 	<div>
 		<h2>
-			<?php _e( 'BNS Body Classes Options and Settings', 'bns-bc' ); ?>
+			<?php _e( 'BNS Body Classes Options and Settings', 'bns-body-classes' ); ?>
 		</h2>
 
-		<?php _e( 'Options and settings related to the BNS Body Classes plugin.', 'bns-bc' ); ?>
+		<?php _e( 'Options and settings related to the BNS Body Classes plugin.', 'bns-body-classes' ); ?>
 
 		<form action="options.php" method="post">
 
@@ -88,7 +88,7 @@ function bnsbc_options_page() {
 			settings_fields( 'bnsbc_custom_classes' );
 			do_settings_sections( 'bnsbc' ); ?>
 
-			<input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-bc' ); ?>" />
+			<input name="Submit" type="submit" value="<?php esc_attr_e( 'Save Changes', 'bns-body-classes' ); ?>" />
 
 		</form>
 		<!-- End form -->
@@ -141,13 +141,13 @@ function add_bnsbc_custom_classes() {
 	);
 	add_settings_section(
 		'add_custom_classes',
-		__( 'Add Custom Classes', 'bns-bc' ),
+		__( 'Add Custom Classes', 'bns-body-classes' ),
 		'add_custom_classes_text',
 		'bnsbc'
 	);
 	add_settings_field(
 		'custom_classes_text_string',
-		__( 'Custom Classes', 'bns-bc' ),
+		__( 'Custom Classes', 'bns-body-classes' ),
 		'custom_classes_input',
 		'bnsbc',
 		'add_custom_classes'
@@ -167,8 +167,8 @@ function add_bnsbc_custom_classes() {
  * @uses        __
  */
 function add_custom_classes_text() {
-	$text = 'Enter your custom classes (separated by commas) into the text field and click the "Save Changes" button.';
-	printf( __( '<p>%1$s</p>', 'bns-bc' ), $text );
+	$text = __( 'Enter your custom classes (separated by commas) into the text field and click the "Save Changes" button.', 'bns-body-classes' );
+	printf( '<p>%1$s</p>', $text );
 }
 
 /** End function - add custom classes text */
