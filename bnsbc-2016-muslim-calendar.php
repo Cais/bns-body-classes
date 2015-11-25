@@ -1,7 +1,7 @@
 <?php
 /**
  * BNS Body Classes Calendar Extension - Muslim Calendar
- * Muslim calendar for the year 2015
+ * Muslim calendar for the year 2016
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Calendar
@@ -52,54 +52,72 @@ function bnsbc_muslim_calendar( $classes ) {
 	$dates = '';
 	/** January */
 	if ( '01' == date( 'm' ) ) {
-		if ( '24' == date( 'd' ) ) {
-			$dates .= ' prophets-birthday';
-		}
+		/** No observances */
 	}
 	/** End if - January */
 
-	/** June */
-	if ( '01' == date( 'm' ) ) {
-		if ( '06' == date( 'd' ) ) {
+	/** May */
+	if ( '05' == date( 'm' ) ) {
+		if ( '05' == date( 'd' ) ) {
 			$dates .= ' isra-and-mi-raj';
+		}
+	}
+	/** End if - May */
+
+	/** June */
+	if ( '06' == date( 'm' ) ) {
+		if ( '07' == date( 'd' ) ) {
+			$dates .= ' ramadan-begins';
 		}
 	}
 	/** End if - June */
 
 	/** July */
 	if ( '07' == date( 'm' ) ) {
-		if ( '09' == date( 'd' ) ) {
-			$dates .= ' ramadan-begins';
+		if ( '02' == date( 'd' ) ) {
+			$dates .= ' laylat-al-qadr night-of-destiny';
+		}
+		if ( '07' == date( 'd' ) ) {
+			$dates .= ' eid-al-fitr';
 		}
 	}
 	/** End if - July */
 
 	/** August */
 	if ( '08' == date( 'm' ) ) {
-		if ( '03' == date( 'd' ) ) {
-			$dates .= ' laylat-al-qadr night-of-destiny';
-		}
-		if ( '08' == date( 'd' ) ) {
-			$dates .= ' eid-al-fitr';
-		}
+		/** No Observances */
 	}
 	/** End if - August */
 
+	/** September */
+	if ( '09' == date( 'm' ) ) {
+		if ( '13' == date( 'd' ) ) {
+			$dates .= ' eid-al-adha';
+		}
+	}
+	/** End if - September */
+
 	/** October */
 	if ( '10' == date( 'm' ) ) {
-		if ( '15' == date( 'd' ) ) {
-			$dates .= ' eid-al-adha';
+		if ( '03' == date( 'd' ) ) {
+			$dates .= ' muharram islamic-new-year';
 		}
 	}
 	/** End if - October */
 
 	/** November */
 	if ( '11' == date( 'm' ) ) {
-		if ( '05' == date( 'd' ) ) {
-			$dates .= ' muharram islamic-new-year';
-		}
+		/** No Observances */
 	}
 	/** End if - November */
+
+	/** December */
+	if ( '12' == date( 'm' ) ) {
+		if ( '12' == date( 'd' ) ) {
+			$dates .= ' prophets-birthday';
+		}
+	}
+	/** End if - December */
 
 	/** Note to, er class for, self */
 	if ( ! empty( $dates ) ) {
