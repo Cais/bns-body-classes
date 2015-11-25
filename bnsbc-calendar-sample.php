@@ -13,7 +13,7 @@
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012-2014, Edward Caissie
+ * @copyright   Copyright (c) 2012-2015, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the

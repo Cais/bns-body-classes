@@ -1,18 +1,18 @@
 <?php
 /**
  * BNS Body Classes Calendar Extension - Christian Calendar
- * Christian calendar for the year 2014
+ * Christian calendar for the year 2015
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Christian_Calendar
- * @since       0.5
+ * @since       0.9
  *
  * @link        http://buynowshop.com/plugins/bns-body-classes/
  * @link        https://github.com/Cais/bns-body-classes/
  * @link        http://wordpress.org/extend/plugins/bns-body-classes
  *
  * @author      Edward Caissie <edward.caissie@gmail.com>
- * @copyright   Copyright (c) 2012-2014, Edward Caissie
+ * @copyright   Copyright (c) 2015, Edward Caissie
  *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License version 2, as published by the
@@ -36,25 +36,17 @@
  */
 
 /**
- * BNSBC Christian Calendar
+ * BNSBC Christian Calendar for 2016
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Christain_Calendar
- * @since       0.5
+ * @since       0.9
  *
- * @internal    Dates are relevant to the year 2014
+ * @internal    Dates are relevant to the year 2016
  *
  * @param       $classes - existing body classes
  *
  * @return      string - classes as defined by dates
- *
- * @version     0.5.2
- * @date        April 9, 2013
- * Added $classes parameter to be able to append new date classes to
- *
- * @version     0.6
- * @date        April 15, 2013
- * Add conditional check to only add if there are actual dates being recognized
  */
 function bnsbc_christian_calendar( $classes ) {
 	$dates = '';
@@ -66,35 +58,40 @@ function bnsbc_christian_calendar( $classes ) {
 	}
 	/** End if - January */
 
-	/** March */
-	if ( '03' == date( 'm' ) ) {
-		if ( '04' == date( 'd' ) ) {
+	/** February */
+	if ( '02' == date( 'm' ) ) {
+		if ( '12' == date( 'd' ) ) {
 			$dates .= ' carnival shrove-tuesday';
 		}
-		if ( '05' == date( 'd' ) ) {
+		if ( '13' == date( 'd' ) ) {
 			$dates .= ' ash-wednesday';
+		}
+	}
+	/** End if - February */
+
+	/** March */
+	if ( '03' == date( 'm' ) ) {
+		if ( '24' == date( 'd' ) ) {
+			$dates .= ' palm-sunday';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= ' maundy-thursday';
+		}
+		if ( '29' == date( 'd' ) ) {
+			$dates .= ' good-friday';
+		}
+		if ( '30' == date( 'd' ) ) {
+			$dates .= ' holy-saturday';
+		}
+		if ( '31' == date( 'd' ) ) {
+			$dates .= ' easter-sunday';
 		}
 	}
 	/** End if - March */
 
 	/** April */
 	if ( '04' == date( 'm' ) ) {
-		if ( '13' == date( 'd' ) ) {
-			$dates .= ' palm-sunday';
-		}
-		if ( '17' == date( 'd' ) ) {
-			$dates .= ' maundy-thursday';
-		}
-		if ( '18' == date( 'd' ) ) {
-			$dates .= ' good-friday';
-		}
-		if ( '19' == date( 'd' ) ) {
-			$dates .= ' holy-saturday';
-		}
-		if ( '20' == date( 'd' ) ) {
-			$dates .= ' easter-sunday';
-		}
-		if ( '21' == date( 'd' ) ) {
+		if ( '01' == date( 'd' ) ) {
 			$dates .= ' easter-monday';
 		}
 	}
@@ -102,28 +99,23 @@ function bnsbc_christian_calendar( $classes ) {
 
 	/** May */
 	if ( '05' == date( 'm' ) ) {
-		if ( '29' == date( 'd' ) ) {
+		if ( '09' == date( 'd' ) ) {
 			$dates .= ' ascension-day';
 		}
-	}
-	/** End if - May */
-
-	/** June */
-	if ( '01' == date( 'm' ) ) {
-		if ( '08' == date( 'd' ) ) {
+		if ( '19' == date( 'd' ) ) {
 			$dates .= ' pentecost';
 		}
-		if ( '09' == date( 'd' ) ) {
+		if ( '20' == date( 'd' ) ) {
 			$dates .= ' whit-monday';
 		}
-		if ( '15' == date( 'd' ) ) {
+		if ( '26' == date( 'd' ) ) {
 			$dates .= ' trinity-sunday';
 		}
-		if ( '19' == date( 'd' ) ) {
+		if ( '30' == date( 'd' ) ) {
 			$dates .= ' corpus-christi';
 		}
 	}
-	/** End if - June */
+	/** End if - May */
 
 	/** August */
 	if ( '08' == date( 'm' ) ) {
