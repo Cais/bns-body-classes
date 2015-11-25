@@ -1,7 +1,7 @@
 <?php
 /**
  * BNS Body Classes Calendar Extension - Christian Calendar
- * Christian calendar for the year 2015
+ * Christian calendar for the year 2016
  *
  * @package     BNS_Body_Classes
  * @subpackage  BNSBC_Christian_Calendar
@@ -42,6 +42,8 @@
  * @subpackage  BNSBC_Christain_Calendar
  * @since       0.9
  *
+ * @link        http://www.timeanddate.com/calendar/?year=2016
+ *
  * @internal    Dates are relevant to the year 2016
  *
  * @param       $classes - existing body classes
@@ -60,10 +62,10 @@ function bnsbc_christian_calendar( $classes ) {
 
 	/** February */
 	if ( '02' == date( 'm' ) ) {
-		if ( '12' == date( 'd' ) ) {
+		if ( '09' == date( 'd' ) ) {
 			$dates .= ' carnival shrove-tuesday';
 		}
-		if ( '13' == date( 'd' ) ) {
+		if ( '10' == date( 'd' ) ) {
 			$dates .= ' ash-wednesday';
 		}
 	}
@@ -71,47 +73,42 @@ function bnsbc_christian_calendar( $classes ) {
 
 	/** March */
 	if ( '03' == date( 'm' ) ) {
-		if ( '24' == date( 'd' ) ) {
+		if ( '20' == date( 'd' ) ) {
 			$dates .= ' palm-sunday';
 		}
-		if ( '28' == date( 'd' ) ) {
+		if ( '24' == date( 'd' ) ) {
 			$dates .= ' maundy-thursday';
 		}
-		if ( '29' == date( 'd' ) ) {
+		if ( '25' == date( 'd' ) ) {
 			$dates .= ' good-friday';
 		}
-		if ( '30' == date( 'd' ) ) {
+		if ( '26' == date( 'd' ) ) {
 			$dates .= ' holy-saturday';
 		}
-		if ( '31' == date( 'd' ) ) {
+		if ( '27' == date( 'd' ) ) {
 			$dates .= ' easter-sunday';
+		}
+		if ( '28' == date( 'd' ) ) {
+			$dates .= ' easter-monday';
 		}
 	}
 	/** End if - March */
 
-	/** April */
-	if ( '04' == date( 'm' ) ) {
-		if ( '01' == date( 'd' ) ) {
-			$dates .= ' easter-monday';
-		}
-	}
-	/** End if - April */
-
 	/** May */
 	if ( '05' == date( 'm' ) ) {
-		if ( '09' == date( 'd' ) ) {
+		if ( '05' == date( 'd' ) ) {
 			$dates .= ' ascension-day';
 		}
-		if ( '19' == date( 'd' ) ) {
+		if ( '15' == date( 'd' ) ) {
 			$dates .= ' pentecost';
 		}
-		if ( '20' == date( 'd' ) ) {
+		if ( '16' == date( 'd' ) ) {
 			$dates .= ' whit-monday';
 		}
-		if ( '26' == date( 'd' ) ) {
+		if ( '22' == date( 'd' ) ) {
 			$dates .= ' trinity-sunday';
 		}
-		if ( '30' == date( 'd' ) ) {
+		if ( '26' == date( 'd' ) ) {
 			$dates .= ' corpus-christi';
 		}
 	}
