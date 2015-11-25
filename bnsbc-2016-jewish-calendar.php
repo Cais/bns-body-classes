@@ -52,7 +52,7 @@ function bnsbc_jewish_calendar( $classes ) {
 	$dates = '';
 	/** January */
 	if ( '01' == date( 'm' ) ) {
-		if ( '26' == date( 'd' ) ) {
+		if ( '25' == date( 'd' ) ) {
 			$dates .= ' tu-b-shevat arbor-day';
 		}
 	}
@@ -60,85 +60,103 @@ function bnsbc_jewish_calendar( $classes ) {
 
 	/** February */
 	if ( '02' == date( 'm' ) ) {
-		if ( '24' == date( 'd' ) ) {
-			$dates .= ' purim';
-		}
+		/** No observances */
 	}
 	/** End if - February */
 
 	/** March */
 	if ( '03' == date( 'm' ) ) {
-		if ( '26' == date( 'd' ) ) {
-			$dates .= ' first-day-of-passover';
+		if ( '24' == date( 'd' ) ) {
+			$dates .= ' purim';
 		}
 	}
 	/** End if - March */
 
 	/** April */
 	if ( '04' == date( 'm' ) ) {
-		if ( '02' == date( 'd' ) ) {
+		if ( '23' == date( 'd' ) ) {
+			$dates .= ' first-day-of-passover';
+		}
+		if ( '30' == date( 'd' ) ) {
 			$dates .= ' last-day-of-passover';
-		}
-		if ( '08' == date( 'd' ) ) {
-			$dates .= ' yom-hashoah';
-		}
-		if ( '16' == date( 'd' ) ) {
-			$dates .= ' yom-haatzmaut';
-		}
-		if ( '28' == date( 'd' ) ) {
-			$dates .= ' lag-b-omer';
 		}
 	}
 	/** End if - April */
 
 	/** May */
 	if ( '05' == date( 'm' ) ) {
-		if ( '15' == date( 'd' ) ) {
-			$dates .= ' shavuot';
+		if ( '04' == date( 'd' ) ) {
+			$dates .= ' yom-hashoah';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= ' yom-haatzmaut';
+		}
+		if ( '26' == date( 'd' ) ) {
+			$dates .= ' lag-b-omer';
 		}
 	}
 	/** End if - May */
 
+	/** June */
+	if ( '06' == date( 'm' ) ) {
+		if ( '12' == date( 'd' ) ) {
+			$dates .= ' shavuot';
+		}
+	}
+	/** End if - June */
+
 	/** July */
 	if ( '07' == date( 'm' ) ) {
-		if ( '16' == date( 'd' ) ) {
-			$dates .= ' tisha-b-av';
-		}
+		/** No observances */
 	}
 	/** End if - July */
 
+	/** August */
+	if ( '08' == date( 'm' ) ) {
+		if ( '14' == date( 'd' ) ) {
+			$dates .= ' tisha-b-av';
+		}
+	}
+	/** End if - August */
+
 	/** September */
 	if ( '09' == date( 'm' ) ) {
-		if ( '05' == date( 'd' ) ) {
-			$dates .= ' rosh-hashana';
-		}
-		if ( '14' == date( 'd' ) ) {
-			$dates .= ' yom-kippur';
-		}
-		if ( '19' == date( 'd' ) ) {
-			$dates .= ' first-day-of-sukkot';
-		}
-		if ( '25' == date( 'd' ) ) {
-			$dates .= ' last-day-of-sukkot';
-		}
-		if ( '26' == date( 'd' ) ) {
-			$dates .= ' shmini-atzeret simchat-torah';
-		}
+		/** No observances */
 	}
 	/** End if - September */
 
+	/** October */
+	if ( '10' == date( 'm' ) ) {
+		if ( '03' == date( 'd' ) ) {
+			$dates .= ' rosh-hashana';
+		}
+		if ( '12' == date( 'd' ) ) {
+			$dates .= ' yom-kippur';
+		}
+		if ( '17' == date( 'd' ) ) {
+			$dates .= ' first-day-of-sukkot';
+		}
+		if ( '23' == date( 'd' ) ) {
+			$dates .= ' last-day-of-sukkot';
+		}
+		if ( '24' == date( 'd' ) ) {
+			$dates .= ' shmini-atzeret';
+		}
+		if ( '25' == date( 'd' ) ) {
+			$dates .= ' simchat-torah';
+		}
+	}
+	/** End if - October */
+
 	/** November */
 	if ( '11' == date( 'm' ) ) {
-		if ( '28' == date( 'd' ) ) {
-			$dates .= ' first-day-of-hanukkah';
-		}
 	}
 	/** End if - November */
 
 	/** December */
 	if ( '12' == date( 'm' ) ) {
-		if ( '05' == date( 'd' ) ) {
-			$dates .= ' last-day-of-hanukkah';
+		if ( '25' == date( 'd' ) ) {
+			$dates .= ' first-day-of-hanukkah';
 		}
 	}
 	/** End if - December */
